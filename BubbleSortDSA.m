@@ -37,7 +37,7 @@
 (*(*Function to create a grid for the array with the elements highlighted in red according to the indices passed in input*)*)
 (*CreateArrayGrid[array_, highlight_]:= Module[{a = array,i, h = highlight, list}, *)
 (*										     (*create a table of grids with the elements and highlight them if needed*)*)
-(*											list =Table[Grid[{{Part[a, i]},{i}},Frame -> True, *)
+(*											list =Table[Grid[{{Part[a, i]},{i-1}},Frame -> True, *)
 (*														If[MemberQ[h, i] , FrameStyle->  Directive[Red,Thick], FrameStyle->  Directive[White, Thick]]],*)
 (*													{i,1,Length[a]}];*)
 (*											Grid[{list}]]*)
