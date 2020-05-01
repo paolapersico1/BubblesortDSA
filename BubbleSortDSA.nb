@@ -1,11 +1,12 @@
 Notebook[{
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"noteDir", "=", 
-   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"SetDirectory", "[", "noteDir", "]"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "BubbleSortDSA.m"}]}], "Input",
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"noteDir", "=", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"SetDirectory", "[", "noteDir", "]"}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"<<", "BubbleSortDSA"}], ".", "m"}]}], "*)"}]], "Input",
  CellChangeTimes->{{3.796755328380985*^9, 3.7967553632472377`*^9}, {
    3.7967553941573925`*^9, 3.796755446729018*^9}, {3.796755479293107*^9, 
    3.796755510533205*^9}, {3.796755543620312*^9, 3.7967555538453274`*^9}, {
@@ -48,14 +49,249 @@ Cell[BoxData[{
    3.797191953240727*^9}, {3.797192618775793*^9, 3.7971929158177834`*^9}, {
    3.7971930003396177`*^9, 3.797193151331254*^9}, {3.797193211543698*^9, 
    3.797193212010724*^9}, {3.7971933856956587`*^9, 3.797193385963674*^9}, {
-   3.797194438277863*^9, 3.7971944398649535`*^9}, 
-   3.7973141962600236`*^9},ExpressionUUID->"c353fadb-6e78-4d57-be05-\
+   3.797194438277863*^9, 3.7971944398649535`*^9}, 3.7973141962600236`*^9, {
+   3.797333734601553*^9, 
+   3.7973337380307493`*^9}},ExpressionUUID->"c353fadb-6e78-4d57-be05-\
 d6c34d8cece3"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.7971889750413837`*^9, 
   3.797188975054384*^9}},ExpressionUUID->"9454b24b-04c5-402b-b246-\
 f12fc2725290"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"cards", " ", "=", " ", 
+    RowBox[{"Import", "/@", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<Cards/*.png\>\"", ",", 
+       RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Function", " ", "to", " ", "get", " ", "value", " ", "of", " ", "a", " ", 
+    "card"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CardToNumber", "[", "c_", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"card", " ", "=", " ", "c"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"index", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"Position", "[", 
+           RowBox[{"cards", ",", " ", "c"}], "]"}], ",", "1"}], "]"}], "-", 
+        "1"}]}], ";", " ", 
+      RowBox[{"Part", "[", 
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"index", ",", "10"}], "]"}], ",", "1"}], "]"}]}]}], "]"}]}], 
+  "\n", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Function", " ", "to", " ", "get", " ", "a", " ", "card", " ", "with", " ",
+     "a", " ", "certain", " ", "value"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NumberToCard", "[", "num_", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"number", " ", "=", " ", "num"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"color", " ", "=", " ", 
+       RowBox[{"RandomInteger", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "3"}], "}"}], "]"}]}], ";", " ", 
+      RowBox[{"Part", "[", 
+       RowBox[{"cards", ",", " ", 
+        RowBox[{"num", "+", "1", " ", "+", " ", 
+         RowBox[{"10", "*", "color"}]}]}], "]"}]}]}], "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"CreateArrayGrid", "[", "array_", "]"}], ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", " ", "=", " ", "array"}], ",", "i"}], "}"}], ",", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Part", "[", 
+            RowBox[{"a", ",", " ", "i"}], "]"}], "}"}], ",", 
+          RowBox[{"{", "i", " ", "}"}]}], "}"}], ",", " ", 
+        RowBox[{"Frame", "->", " ", "All"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CreateArrayGrid", "[", 
+    RowBox[{"array_", ",", " ", "highlight_"}], "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"a", " ", "=", " ", "array"}], ",", "i", ",", " ", 
+       RowBox[{"h", " ", "=", " ", "highlight"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", "\t\t\t\t\t\t\t\t\t\t\t", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Grid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Part", "[", 
+             RowBox[{"a", ",", " ", "i"}], "]"}], "}"}], ",", 
+           RowBox[{"{", "i", "}"}]}], "}"}], ",", " ", 
+         RowBox[{"Frame", "->", " ", "All"}], ",", " ", 
+         RowBox[{"FrameStyle", "\[Rule]", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Thick"}], "]"}]}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "\t\t\t\t\t\t\t\t\t\t", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "a", "]"}]}], "}"}]}], "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BubbleSort", "[", "list_List", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"l", "=", "list"}], ",", "i", ",", "j", ",", 
+       RowBox[{"len", "=", 
+        RowBox[{"Length", "[", "list", "]"}]}]}], "}"}], ",", "\n", 
+     "\t\t\t\t\t\t\t", 
+     RowBox[{
+      RowBox[{"steps", " ", "=", " ", 
+       RowBox[{"List", "[", "list", "]"}]}], ";", "\n", "\t\t\t\t\t\t\t", 
+      RowBox[{"Do", "[", "\n", "\t\t\t\t\t\t\t\t", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Do", "[", "\n", "\t\t\t\t\t\t\t\t\t", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"CardToNumber", "[", 
+                RowBox[{"l", "[", 
+                 RowBox[{"[", "j", "]"}], "]"}], "]"}], ">", " ", 
+               RowBox[{"CardToNumber", "[", 
+                RowBox[{"l", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"j", "+", "1"}], "]"}], "]"}], "]"}]}], ",", "\n", 
+              "\t\t\t\t\t\t\t\t\t", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"l", "[", 
+                  RowBox[{"[", "j", "]"}], "]"}], ",", 
+                 RowBox[{"l", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"j", "+", "1"}], "]"}], "]"}]}], "}"}], "=", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"l", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"j", "+", "1"}], "]"}], "]"}], ",", 
+                 RowBox[{"l", "[", 
+                  RowBox[{"[", "j", "]"}], "]"}]}], "}"}]}], ",", "\n", 
+              "\t\t\t\t\t\t\t\t\t", "True"}], "]"}], ";", 
+            "\[IndentingNewLine]", "\t\t\t\t\t\t\t      ", 
+            RowBox[{"steps", " ", "=", " ", 
+             RowBox[{"Append", "[", 
+              RowBox[{"steps", ",", " ", "l"}], "]"}]}]}], ",", "\n", 
+           "\t\t\t\t\t\t\t\t", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "1", ",", 
+             RowBox[{"len", "-", "1"}]}], "}"}]}], "]"}], ";"}], ",", "\n", 
+        "\t\t\t\t\t\t\t", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", 
+          RowBox[{"len", "-", "1"}]}], "}"}]}], "]"}], ";", " ", "l"}]}], 
+    "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"array", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"NumberToCard", "[", 
+      RowBox[{"RandomInteger", "[", "9", "]"}], "]"}], ",", "4"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"BubbleSort", "[", "array", "]"}], ";"}], "\n", 
+ RowBox[{"steps", ";"}], "\n", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"CreateArrayGrid", "[", 
+    RowBox[{"Part", "[", 
+     RowBox[{"steps", ",", "passo"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"passo", ",", "1", ",", 
+     RowBox[{"Length", "[", "steps", "]"}], ",", "1"}], "}"}], ",", " ", 
+   RowBox[{"ControlPlacement", "->", "Top"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7973339410363607`*^9, 3.7973339788565235`*^9}, {
+  3.797334028383356*^9, 3.79733404034204*^9}, {3.7973341087099504`*^9, 
+  3.7973341353964767`*^9}, {3.7973341679143367`*^9, 3.7973342721953015`*^9}, {
+  3.7973346311868343`*^9, 3.7973346614895678`*^9}, {3.797334892220765*^9, 
+  3.797334931302*^9}, {3.7973350871349134`*^9, 3.7973351868986197`*^9}, {
+  3.797335385077955*^9, 3.7973354127585382`*^9}, {3.797335563276147*^9, 
+  3.797335569667513*^9}, {3.797335604114483*^9, 3.79733561718023*^9}, {
+  3.7973357259354506`*^9, 3.7973357282495832`*^9}, {3.79733577365418*^9, 
+  3.797335798197584*^9}, {3.797335878678187*^9, 
+  3.797335915990321*^9}},ExpressionUUID->"54e1c6f3-5968-414c-b155-\
+4eac264cc617"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`passo$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`passo$$], 1, 10, 1}}, Typeset`size$$ = {
+    542.5, {88.64999999999999, 93.14999999999999}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`passo$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`CreateArrayGrid[
+        Part[$CellContext`steps, $CellContext`passo$$]], 
+      "Specifications" :> {{$CellContext`passo$$, 1, 10, 1}}, 
+      "Options" :> {ControlPlacement -> Top}, "DefaultOptions" :> {}],
+     ImageSizeCache->{579., {122.25, 126.75}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7973358006077213`*^9, {3.7973358809043145`*^9, 3.7973358951571293`*^9}},
+ CellLabel->"Out[155]=",ExpressionUUID->"6817bda8-2708-498b-8972-af878454a8e8"]
+}, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{3.7971885127259407`*^9, 
