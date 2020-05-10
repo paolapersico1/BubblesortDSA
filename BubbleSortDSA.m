@@ -106,22 +106,22 @@ StartBubbleSortGame[optimized_:False] :=
 	(*radiobuttonbar to select the length of the array*)
 	lengthBar = RadioButtonBar[Dynamic[len],Range[1,6]];
 	(*array in input*)
-	elements = InputField[Dynamic[inputArray], FieldHint->"{0,1,2,3,4,5}"]; 
-
+	elements = InputField[Dynamic[inputArray], FieldHint-> "{0,1,2,3,4,5}"]; 
 	(*button to create the cards array and start the game*)    
 	createButton = Button["Crea array", 
 	If[SameQ[inputArray, Null], (*if the user hasn't specified an array*)
 		(*a random array with the selected length is created*)
-		start = Table[NumberToCard[RandomInteger[9]], len  ]; game = BubbleSortGame[start],
+		start = Table[NumberToCard[RandomInteger[9]], len  ]; game = BubbleSortGame[start]; inputArray = Null,
 		(*otherwise we check if the input is a list of integers between 0 and 9*)
 		If[MatchQ[inputArray, { (0|1|2|3|4|5|6|7|8|9)..}], 
 			start = Map[NumberToCard,inputArray ];
 			(*if the length of the array is the same as the one selected, start the game*)
-			If[Length[start] == len, game = BubbleSortGame[start, opt],  game = "Lunghezza array sbagliata"], 
-			game = "L'array pu\[OGrave] contenere solo numeri da 0 a 9"]]];
+			If[Length[start] == len, game = BubbleSortGame[start, opt]; inputArray = Null,  game = "Lunghezza array sbagliata"], 
+			game = "L'array pu\[OGrave] contenere solo interi da 0 a 9"]]];
 
 	(*return the graphics elements*)
-	Grid[{{"lunghezza dell'array", lengthBar}, {"array", elements},{createButton}, {}, {Dynamic[game]}}, Alignment->Left]];
+	inputGrid = Grid[{{"lunghezza dell'array:", lengthBar}, {"array:", elements},{createButton}}, Alignment->Left];
+	Grid[{{inputGrid }, {}, {Dynamic[game]} }, Alignment->Left] ];
 
 (*Function that takes an array as input and implements the bubblesort game*)
 BubbleSortGame[start_, optimized_:False] := 
