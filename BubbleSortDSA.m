@@ -102,26 +102,31 @@ BubbleSortAnimation[length_, toggler_, optimized_:False] :=
 
 (*Function to start the bubblesort game*)
 StartBubbleSortGame[optimized_:False] := 
-	DynamicModule[{opt = optimized, inputArray = Null, len = 6, start, game = ""},
+	DynamicModule[{opt = optimized, inputArray = Null, len = 6, start, message = "", game = ""},
 	(*radiobuttonbar to select the length of the array*)
 	lengthBar = RadioButtonBar[Dynamic[len],Range[1,6]];
 	(*array in input*)
 	elements = InputField[Dynamic[inputArray], FieldHint-> "{0,1,2,3,4,5}"]; 
 	(*button to create the cards array and start the game*)    
-	createButton = Button["Crea array", 
+	createButton = Button["Crea nuovo array", 
 	If[SameQ[inputArray, Null], (*if the user hasn't specified an array*)
 		(*a random array with the selected length is created*)
-		start = Table[NumberToCard[RandomInteger[9]], len  ]; game = BubbleSortGame[start]; inputArray = Null,
+		start = Table[NumberToCard[RandomInteger[9]], len  ]; 
+		game = BubbleSortGame[start]; 
+		inputArray = Null; 
+		message = "",
 		(*otherwise we check if the input is a list of integers between 0 and 9*)
 		If[MatchQ[inputArray, { (0|1|2|3|4|5|6|7|8|9)..}], 
 			start = Map[NumberToCard,inputArray ];
 			(*if the length of the array is the same as the one selected, start the game*)
-			If[Length[start] == len, game = BubbleSortGame[start, opt]; inputArray = Null,  game = "Lunghezza array sbagliata"], 
-			game = "L'array pu\[OGrave] contenere solo interi da 0 a 9"]]];
+			If[Length[start] == len, 
+		game = BubbleSortGame[start, opt]; inputArray = Null; message = "", 
+		 message = "Lunghezza array sbagliata"], 
+			message = "L'array pu\[OGrave] contenere solo interi da 0 a 9"]]];
 
 	(*return the graphics elements*)
 	inputGrid = Grid[{{"lunghezza dell'array:", lengthBar}, {"array:", elements},{createButton}}, Alignment->Left];
-	Grid[{{inputGrid }, {}, {Dynamic[game]} }, Alignment->Left] ];
+  Grid[{{inputGrid }, {}, {Dynamic[Style[message, Red]]},{Dynamic[game]} }, Alignment->Left] ];
 
 (*Function that takes an array as input and implements the bubblesort game*)
 BubbleSortGame[start_, optimized_:False] := 
@@ -131,6 +136,7 @@ BubbleSortGame[start_, optimized_:False] :=
 	currentArray = originalArray;    (*current state of the array*)
 	arrayDisplay= CreateArrayGrid[currentArray];       (*grid with the current array*)
 	message = "";           (*info message*)
+	successMessage = "";
 
 	(*togglerbar to see the current array and select elements*)
 	selectionBar = Dynamic[TogglerBar[Dynamic[selection],arrayDisplay]];            
@@ -164,11 +170,13 @@ BubbleSortGame[start_, optimized_:False] :=
 	finishButton = Button["Ho finito!", 
 					Dynamic[If[swapNumber == Length[steps],   (*check if they reached the final step*)
 								enabled = False;    (*disable the swap button*)
-								message = "Complimenti, l'array \[EGrave] ordinato!",
+								successMessage = "Complimenti, l'array \[EGrave] ordinato! \[HappySmiley]",
 								message = "Non hai ancora finito..."]]];
 
 	(*display elements of the game*)
-	Dynamic[Grid[{{selectionBar}, {swapButton, finishButton}, {Dynamic[message]}}]]];          
+	gameGrid = Dynamic[Grid[{{selectionBar}, {swapButton, finishButton}}, Alignment->Left]];
+	Dynamic[Grid[{{gameGrid}, {Dynamic[Style[message, Red]]}, {Dynamic[Style[successMessage, Bold, Darker[Green]]]}}, Alignment->Left]]];  
+        
 
 End[]
 
