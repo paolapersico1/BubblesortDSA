@@ -126,7 +126,7 @@ StartBubbleSortGame[optimized_:False] :=
 
 	(*return the graphics elements*)
 	inputGrid = Grid[{{"lunghezza dell'array:", lengthBar}, {"array:", elements},{createButton}}, Alignment->Left];
-  Grid[{{inputGrid }, {}, {Dynamic[Style[message, Red]]},{Dynamic[game]} }, Alignment->Left] ];
+  Grid[{{inputGrid }, {Dynamic[Style[message, Red]]}, {}, {Dynamic[game]} }, Alignment->Left] ];
 
 (*Function that takes an array as input and implements the bubblesort game*)
 BubbleSortGame[start_, optimized_:False] := 
