@@ -175,7 +175,7 @@ BubbleSortGame[start_, optimized_:False] :=
 
 	(*display elements of the game*)
 	gameGrid = Dynamic[Grid[{{selectionBar}, {swapButton, finishButton}}, Alignment->Left]];
-	Dynamic[Grid[{{gameGrid}, {Dynamic[Style[message, Red]]}}, Alignment->Left]]];  
+	Dynamic[Grid[{{gameGrid}, {Dynamic[message]}}, Alignment->Left]]];  
         
 
 End[]
