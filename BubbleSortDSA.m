@@ -153,14 +153,17 @@ BubbleSortGame[start_, optimized_:False] :=
 							selection = List[];     (*reset the selection*)
 							(*if the move was correct*)
 							If[swapNumber+1 <=Length[steps] && trial == Part[steps,swapNumber+1], 
-								message = "Scambio giusto!"; 
+								message = "";
+								successMessage = "Scambio giusto!"; 
 								swapNumber = swapNumber +1;      (*update the number of swaps*)
 								(*display the new array*)
 								currentArray = trial;
 								arrayDisplay= CreateArrayGrid[currentArray],
 								(*if the user was wrong*) 
+								successMessage = "";
 								message = "Scambio sbagliato!"],
 								(*the user selected less or more than two elements*)
+								successMessage = "";
 								message = "Numero di elementi da scambiare non valido"; 
 								(*reset the selection*)
 								selection = List[]]], 
@@ -170,6 +173,7 @@ BubbleSortGame[start_, optimized_:False] :=
 	finishButton = Button["Ho finito!", 
 					Dynamic[If[swapNumber == Length[steps],   (*check if they reached the final step*)
 								enabled = False;    (*disable the swap button*)
+								message = "";
 								successMessage = "Complimenti, l'array \[EGrave] ordinato! \[HappySmiley]",
 								message = "Non hai ancora finito..."]]];
 
