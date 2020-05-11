@@ -136,7 +136,6 @@ BubbleSortGame[start_, optimized_:False] :=
 	currentArray = originalArray;    (*current state of the array*)
 	arrayDisplay= CreateArrayGrid[currentArray];       (*grid with the current array*)
 	message = "";           (*info message*)
-	successMessage = "";
 
 	(*togglerbar to see the current array and select elements*)
 	selectionBar = Dynamic[TogglerBar[Dynamic[selection],arrayDisplay]];            

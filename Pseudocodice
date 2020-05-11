@@ -1,0 +1,29 @@
+Classico
+
+for ( i = 1; i < len; i++ )
+{
+	for ( j = 0; j < len-1; j++ )
+	{
+		if ( a[j] > a[j+1] )
+		{      
+	   		scambia a[j] e a[j+1] 
+	   	}
+	}
+}
+
+Ottimizzato
+
+N = len
+
+for ( i = 1; i < len; i++ )
+{
+	for ( j = 0; j < N-1; j++ )
+	{
+		if ( a[j] > a[j+1] )
+		{      
+	   		scambia a[j] e a[j+1]
+	   	}
+	}
+
+	N--
+}
