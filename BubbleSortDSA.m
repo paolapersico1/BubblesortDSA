@@ -153,18 +153,15 @@ BubbleSortGame[start_, optimized_:False] :=
 							selection = List[];     (*reset the selection*)
 							(*if the move was correct*)
 							If[swapNumber+1 <=Length[steps] && trial == Part[steps,swapNumber+1], 
-								message = "";
-								successMessage = "Scambio giusto!"; 
+								message = Style["Scambio giusto!", Darker[Green]]; 
 								swapNumber = swapNumber +1;      (*update the number of swaps*)
 								(*display the new array*)
 								currentArray = trial;
 								arrayDisplay= CreateArrayGrid[currentArray],
 								(*if the user was wrong*) 
-								successMessage = "";
-								message = "Scambio sbagliato!"],
+								message = Style["Scambio sbagliato!", Red]],
 								(*the user selected less or more than two elements*)
-								successMessage = "";
-								message = "Numero di elementi da scambiare non valido"; 
+								message = Style["Numero di elementi da scambiare non valido", Red]; 
 								(*reset the selection*)
 								selection = List[]]], 
 					Enabled -> Dynamic[enabled]];
@@ -173,13 +170,12 @@ BubbleSortGame[start_, optimized_:False] :=
 	finishButton = Button["Ho finito!", 
 					Dynamic[If[swapNumber == Length[steps],   (*check if they reached the final step*)
 								enabled = False;    (*disable the swap button*)
-								message = "";
-								successMessage = "Complimenti, l'array \[EGrave] ordinato! \[HappySmiley]",
-								message = "Non hai ancora finito..."]]];
+								message = Style["Complimenti, l'array \[EGrave] ordinato! \[HappySmiley]", Darker[Green], Bold],
+								message = Style["Non hai ancora finito...", Red]]]];
 
 	(*display elements of the game*)
 	gameGrid = Dynamic[Grid[{{selectionBar}, {swapButton, finishButton}}, Alignment->Left]];
-	Dynamic[Grid[{{gameGrid}, {Dynamic[Style[message, Red]]}, {Dynamic[Style[successMessage, Bold, Darker[Green]]]}}, Alignment->Left]]];  
+	Dynamic[Grid[{{gameGrid}, {Dynamic[Style[message, Red]]}}, Alignment->Left]]];  
         
 
 End[]
