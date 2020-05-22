@@ -175,7 +175,100 @@ BubbleSortGame[start_, optimized_:False] :=
 	(*display elements of the game*)
 	gameGrid = Dynamic[Grid[{{selectionBar}, {swapButton, finishButton}}, Alignment->Left]];
 	Dynamic[Grid[{{gameGrid}, {Dynamic[message]}}, Alignment->Left]]];  
-        
+
+
+ (*function that computes the number of exchanges at first pass*)
+ComputePass[currentArray_,optimized_]:=
+	Module[{array = currentArray, opt = optimized, i, j, len = Length[list], n, frames, final, count},
+	(*first element: list of cards, second element: compared indices, third element: final elements*)
+	frames = List[List[list],List[{}], List[{}]];
+	n = len;
+	(*for len-1 times*)
+	Do[
+		(*update frames*)
+			If[opt, final = Last[Part[frames,3]], final ={}]; 
+			frames = AppendFrame[frames, array, List[j, j+1], final];
+			(*compare adjacent elements and swap if  in wrong order*)
+			If[CardToNumber[l[[j]]]> CardToNumber[l[[j+1]]], 
+				array = Swap[l, j, j+1];
+				count=count+1;
+				(*update frames*)
+				frames = AppendFrame[frames, array, Last[Part[frames,2]], final],True],
+		{j,1,n-1}]; ]
+
+(*Function to start the bubblesort quiz*)
+StartBubbleSortQuiz[optimized_:False] := 
+	DynamicModule[{opt = optimized, inputArray = Null, len = 6, start,quiz=""},
+	(*radiobuttonbar to select the length of the array*)
+	lengthBar = RadioButtonBar[Dynamic[len],Range[1,6]];
+	(*array in input*)
+	elements = InputField[Dynamic[inputArray], FieldHint->"{0,1,2,3,4,5}"]; 
+
+	(*button to create the cards array and start the game*)    
+	createButton = Button["Crea array e inizia il quiz", 
+	If[SameQ[inputArray, Null], (*if the user hasn't specified an array*)
+		(*a random array with the selected length is created*)
+		start = Table[NumberToCard[RandomInteger[9]], len  ]; quiz=BubbleSortQuiz[start],
+		(*otherwise we check if the input is a list of integers between 0 and 9*)
+		If[MatchQ[inputArray, { (0|1|2|3|4|5|6|7|8|9)..}], 
+			start = Map[NumberToCard,inputArray ];
+			(*if the length of the array is the same as the one selected, start the game*)
+			If[Length[start] == len, quiz=BubbleSortQuiz[start,opt],  quiz = "Lunghezza array sbagliata"], 
+			quiz = "L'array può contenere solo numeri da 0 a 9"]]
+			];
+			
+
+	(*return the graphics elements*)
+	Grid[{{"lunghezza dell'array", lengthBar}, {"array", elements},{createButton}, {}, {Dynamic[quiz]}}]];  
+	      	      
+	      	      	      	      
+(*function that takes the input answer and check if it is correct *)
+BubbleSortQuiz[start_, optimized_:False]:=
+	DynamicModule[{originalArray = start, opt = optimized, steps,comparisons, currentArray, arrayDisplay,count,input1= Null,input2= Null,input3= Null},
+	currentArray = originalArray;    (*current state of the array*)
+	arrayDisplay= CreateArrayGrid[currentArray];
+	element1 = InputField[Dynamic[input1],Number, FieldHint->"Inserici valore"]; 
+	element2 = InputField[Dynamic[input2],Number, FieldHint->"Inserici valore"];
+	element3 = InputField[Dynamic[input3],Number, FieldHint->"Inserici valore"];
+	message1 = "";
+	message2 = "";
+	message3 = "";
+	 numpassate= steps;            (*number of pass*)
+	 numconfronti=comparisons;     (*number comparisons*)
+	 numprimapass= count;          (*number of exchanges first pass*)
+	 
+	 ComputePass[currentArray,opt];
+	 
+	(*check if the number of pass is correct*)
+	 answerButton1 = Button["Controlla",
+						Dynamic[If[NumberQ[ input1 == numpassate],
+							message1 = "Risposta corretta!", (*if the answare is correct*)
+							message1 = "Risposta sbagliata!"] (*if the answare is wrong*) 
+							]];
+
+	(*check if the number of comparisons is correct*)
+	 answerButton2 = Button["Controlla",		
+						Dynamic[If[NumberQ[ input2 == numconfronti], 
+							message2 = "Risposta corretta!", (*if the answare is correct*)
+							message2 = "Risposta sbagliata!"] (*if the answare is wrong*) 
+							]];
+							
+	
+	(*check if number of exchanges first pass is correct*)	
+	answerButton3 = Button["Controlla",	
+						Dynamic[If[NumberQ[ input3 == numprimpass], 
+							message3 = "Risposta corretta!", (*if the answare is correct*)	
+							message3 = "Risposta sbagliata!"] (*if the answare is wrong*) 
+							]];
+							
+	ClearAll[input1,input2,input3];
+							
+	(*return the graphics elements*)						
+	Grid[{{arrayDisplay},{}}]
+	Grid[{{Text[Style["QUIZ:",Large,Bold,Red]]},{Text["Quante passate fa l'algoritmo per riordinare l'array?"]},{element1, answerButton1, Dynamic[message1]}, 
+	{},{Text["Quanti confronti devi fa l'algoritmo per riordinare l'array?"]},
+	{element2, answerButton2, Dynamic[message2]}, {},{Text["Quanti scambi devi fare nella prima passata dell'algoritmo?"]},
+	{element3, answerButton3, Dynamic[message3]} ,{}}]];  
 
 End[]
 
