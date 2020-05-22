@@ -1,0 +1,282 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10348,        274]
+NotebookOptionsPosition[      9408,        250]
+NotebookOutlinePosition[      9855,        267]
+CellTagsIndexPosition[      9812,        264]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "stampa", " ", "del", " ", "grafico", " ", "computazionale", " ", "del", 
+    " ", "bubble", " ", "sort", " ", "generando", " ", "elementi", " ", 
+    "random"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"First", "[", 
+           RowBox[{"Timing", "[", 
+            RowBox[{"bubbleSort", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"RandomInteger", "[", 
+                RowBox[{"9", ",", "n"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], "]"}], 
+            "]"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "100", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7990729939222293`*^9, 3.7990730353165264`*^9}, {
+  3.799073065970547*^9, 3.7990730828972845`*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"3cf0a20b-a212-4e89-aa00-b7b7cc3e5c96"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 87, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 100, 1}}, Typeset`size$$ = {
+    360., {107., 112.50401468808235`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Table[{$CellContext`i, 
+          First[
+           Timing[
+            $CellContext`bubbleSort[
+             Table[
+              RandomInteger[
+              9, $CellContext`n$$], {$CellContext`i, 1, 
+               100}]]]]}, {$CellContext`i, 1, 100}], PlotStyle -> Red], 
+      "Specifications" :> {{$CellContext`n$$, 1, 100, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{632., {137., 143.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.799073053305417*^9, 3.799073085014618*^9},
+ CellLabel->"Out[71]=",ExpressionUUID->"d8e07dd5-d14b-4d98-bd99-c7513e519f34"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "stampa", " ", "con", " ", "anche", " ", "il", " ", "merge", " ", "sort"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.799073100786442*^9, 
+  3.799073115863125*^9}},ExpressionUUID->"30f2fbc7-43d7-4e79-8221-\
+751215056e8b"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"MergeSort", "[", "m_List", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "middle", "}"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "m", "]"}], "\[GreaterEqual]", "2"}], ",", 
+       RowBox[{
+        RowBox[{"middle", "=", 
+         RowBox[{"Ceiling", "[", 
+          RowBox[{
+           RowBox[{"Length", "[", "m", "]"}], "/", "2"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Apply", "[", 
+         RowBox[{"Merge", ",", 
+          RowBox[{"Map", "[", 
+           RowBox[{"MergeSort", ",", 
+            RowBox[{"Partition", "[", 
+             RowBox[{"m", ",", "middle", ",", "middle", ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], "]"}]}], "]"}]}], ",", "m"}], 
+      "]"}]}], "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Merge", "[", 
+   RowBox[{"left_List", ",", "right_List"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"leftIndex", "=", "1"}], ",", 
+      RowBox[{"rightIndex", "=", "1"}]}], "}"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Which", "[", 
+       RowBox[{
+        RowBox[{"leftIndex", ">", 
+         RowBox[{"Length", "[", "left", "]"}]}], ",", 
+        RowBox[{"right", "[", 
+         RowBox[{"[", 
+          RowBox[{"rightIndex", "++"}], "]"}], "]"}], ",", 
+        RowBox[{"rightIndex", ">", 
+         RowBox[{"Length", "[", "right", "]"}]}], ",", 
+        RowBox[{"left", "[", 
+         RowBox[{"[", 
+          RowBox[{"leftIndex", "++"}], "]"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"left", "[", 
+          RowBox[{"[", "leftIndex", "]"}], "]"}], "\[LessEqual]", 
+         RowBox[{"right", "[", 
+          RowBox[{"[", "rightIndex", "]"}], "]"}]}], ",", 
+        RowBox[{"left", "[", 
+         RowBox[{"[", 
+          RowBox[{"leftIndex", "++"}], "]"}], "]"}], ",", "True", ",", 
+        RowBox[{"right", "[", 
+         RowBox[{"[", 
+          RowBox[{"rightIndex", "++"}], "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Length", "[", "left", "]"}], "+", 
+        RowBox[{"Length", "[", "right", "]"}]}], "}"}]}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7990732076107683`*^9, 
+  3.799073216223733*^9}},ExpressionUUID->"ca0835f1-562f-4c6a-8e87-\
+338547c82a88"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"First", "[", 
+          RowBox[{"Timing", "[", 
+           RowBox[{"MergeSort", "[", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"9", ",", "n"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], "]"}], 
+           "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "100"}], "}"}]}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "100", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7990732293327007`*^9, 3.799073249062933*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"5bad2aba-5bbb-4fa4-88f5-2d9bbc03d3cc"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 80, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 100, 1}}, Typeset`size$$ = {
+    360., {107., 112.50401468808235`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Table[{$CellContext`i, 
+          First[
+           Timing[
+            $CellContext`MergeSort[
+             Table[
+              RandomInteger[
+              9, $CellContext`n$$], {$CellContext`i, 1, 
+               100}]]]]}, {$CellContext`i, 1, 100}], PlotStyle -> Blue], 
+      "Specifications" :> {{$CellContext`n$$, 1, 100, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{632., {137., 143.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7990732378150067`*^9, 3.7990732535608983`*^9}},
+ CellLabel->"Out[73]=",ExpressionUUID->"0add1291-9011-43c3-bf4d-e1e78ba3972f"]
+}, Open  ]]
+},
+WindowSize->{948.5999999999999, 459.},
+WindowMargins->{{Automatic, 91.79999999999995}, {
+  5.399999999999977, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"445dcb66-68f8-4f0e-99ae-a23170b15d1f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1300, 32, 68, "Input",ExpressionUUID->"3cf0a20b-a212-4e89-aa00-b7b7cc3e5c96"],
+Cell[1883, 56, 1859, 40, 299, "Output",ExpressionUUID->"d8e07dd5-d14b-4d98-bd99-c7513e519f34"]
+}, Open  ]],
+Cell[3757, 99, 265, 7, 28, "Input",ExpressionUUID->"30f2fbc7-43d7-4e79-8221-751215056e8b"],
+Cell[4025, 108, 2494, 68, 185, "Input",ExpressionUUID->"ca0835f1-562f-4c6a-8e87-338547c82a88"],
+Cell[CellGroupData[{
+Cell[6544, 180, 980, 25, 49, "Input",ExpressionUUID->"5bad2aba-5bbb-4fa4-88f5-2d9bbc03d3cc"],
+Cell[7527, 207, 1865, 40, 322, "Output",ExpressionUUID->"0add1291-9011-43c3-bf4d-e1e78ba3972f"]
+}, Open  ]]
+}
+]
+*)
+
