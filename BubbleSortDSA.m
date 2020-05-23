@@ -241,14 +241,14 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	 
 	(*check if the number of pass is correct*)
 	 answerButton1 = Button["Controlla",
-						Dynamic[If[NumberQ[ input1 == numpassate],
+						Dynamic[If [NumberQ[input1 == numpassate],Number,
 							message1 = "Risposta corretta!", (*if the answare is correct*)
 							message1 = "Risposta sbagliata!"] (*if the answare is wrong*) 
 							]];
 
 	(*check if the number of comparisons is correct*)
 	 answerButton2 = Button["Controlla",		
-						Dynamic[If[NumberQ[ input2 == numconfronti], 
+						Dynamic[If[NumberQ[ input2 == numconfronti], Number,
 							message2 = "Risposta corretta!", (*if the answare is correct*)
 							message2 = "Risposta sbagliata!"] (*if the answare is wrong*) 
 							]];
@@ -256,7 +256,7 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	
 	(*check if number of exchanges first pass is correct*)	
 	answerButton3 = Button["Controlla",	
-						Dynamic[If[NumberQ[ input3 == numprimpass], 
+						Dynamic[If[NumberQ[ input3 == numprimpass], Number, 
 							message3 = "Risposta corretta!", (*if the answare is correct*)	
 							message3 = "Risposta sbagliata!"] (*if the answare is wrong*) 
 							]];
