@@ -256,7 +256,6 @@ StartBubbleSortQuiz[optimized_:False] :=
 BubbleSortQuiz[start_, optimized_:False]:=
 	DynamicModule[{originalArray = start, opt = optimized,array,n, i,steps,count,frames, currentArray, arrayDisplay,input1= Null,input2= Null,input3= Null}, 
 	currentArray = originalArray;    (*current state of the array*)
-	(*arrayDisplay= CreateArrayGrid[currentArray];       grid with the current array*)
 	array=currentArray;
 	count=0;
 	n=Length[currentArray];
@@ -275,29 +274,28 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	message2 = "";
 	message3 = "";
 	message4 = "";
-	(*numpassate= steps;            number of pass*)
-	(*numconfronti=comparisons;     number comparisons*)
+
 		 
 	(*check if the number of pass is correct*)
 	 answerButton1 = Button["Controlla",
-						Dynamic[If [input1 == (n-1), 
-							message1 = "Risposta corretta!", (*if the answare is correct*)
-							message1 = "Risposta sbagliata!"](*if the answare is wrong*) 
+						Dynamic[If [input1 == n-1, 
+							message1 = Style["Risposta corretta!",Darker[Green], Bold], (*if the answare is correct*)
+							message1 = Style["Risposta sbagliata!",Red,Bold]](*if the answare is wrong*) 
 							]];
 
 	(*check if the number of comparisons is correct*)
 	 answerButton2 = Button["Controlla",		
 						Dynamic[If[ input2 == (n-1)^2, 
-							message2 = "Risposta corretta!", (*if the answare is correct*)
-							message2 = "Risposta sbagliata!"](*if the answare is wrong*) 
+							message2 = Style["Risposta corretta!",Darker[Green], Bold], (*if the answare is correct*)
+							message2 = Style["Risposta sbagliata!",Red,Bold]](*if the answare is wrong*) 
 							]];
 							
 	
 	(*check if number of exchanges first pass is correct*)	
 	answerButton3 = Button["Controlla",	
 						Dynamic[If[input3 == count, 
-							message3 = "Risposta corretta!", (*if the answare is correct*)	
-							message3 = "Risposta sbagliata!"] (*if the answare is wrong*) 
+							message3 = Style["Risposta corretta!",Darker[Green], Bold], (*if the answare is correct*)
+							message3 = Style["Risposta sbagliata!",Red,Bold]] (*if the answare is wrong*) 
 							]];
 			
 							
