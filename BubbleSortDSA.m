@@ -18,6 +18,7 @@ cards = Import/@FileNames["Cards/*.png", NotebookDirectory[]];
 
 BubbleSortAnimation::usage="Function to create the bubblesort animation"
 StartBubbleSortGame::usage="Function to start the bubblesort game"
+StartBubbleSortQuiz::usage="Function to start the bubblesort quiz"
 PlotOptimizedBubbleSort::usage="Function to plot the Bubble Sort complexity compared to its optimized version"
 PlotBubbleSort::usage="Function to plot the Bubble Sort complexity compared to x squared"	
 
@@ -242,19 +243,20 @@ StartBubbleSortQuiz[optimized_:False] :=
 			start = Map[NumberToCard,inputArray ];
 			(*if the length of the array is the same as the one selected, start the game*)
 			If[Length[start] == len, quiz=BubbleSortQuiz[start,opt],  quiz = "Lunghezza array sbagliata"], 
-			quiz = "L'array può contenere solo numeri da 0 a 9"]]
+			quiz = "L'array pu\[OGrave] contenere solo numeri da 0 a 9"]]
 			];
 			
 
 	(*return the graphics elements*)
-	Grid[{{"lunghezza dell'array", lengthBar}, {"array", elements},{createButton}, {}, {Dynamic[quiz]}}]];  
+	inputGrid = Grid[{{"lunghezza dell'array:", lengthBar}, {"array:", elements},{createButton}}, Alignment->Left];
+    Grid[{{inputGrid }, {}, {Dynamic[quiz]} }, Alignment->Left]];
 	      	      
 	      	      	      	      
 (*function that takes the input answer and check if it is correct *)
 BubbleSortQuiz[start_, optimized_:False]:=
-	DynamicModule[{originalArray = start, opt = optimized,array,n, steps,count,frames, currentArray, arrayDisplay,input1= Null,input2= Null,input3= Null},
+	DynamicModule[{originalArray = start, opt = optimized,array,n, i,steps,count,frames, currentArray, arrayDisplay,input1= Null,input2= Null,input3= Null}, 
 	currentArray = originalArray;    (*current state of the array*)
-	arrayDisplay= CreateArrayGrid[currentArray];
+	(*arrayDisplay= CreateArrayGrid[currentArray];       grid with the current array*)
 	array=currentArray;
 	count=0;
 	n=Length[currentArray];
@@ -263,8 +265,8 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	Do[
 			(*compare adjacent elements and swap if  in wrong order*)
 			If[CardToNumber[array[[j]]]> CardToNumber[array[[j+1]]], 
-				count=count+1,   (*storage variable of exchanges pass*)
-				Print[count];],{j,0,n-1}];
+				count=count+1   (*storage variable of exchanges pass*)
+				],{j,0,n-1}];
 				
 	element1 = InputField[Dynamic[input1],Number, FieldHint->"Inserici valore"]; 
 	element2 = InputField[Dynamic[input2],Number, FieldHint->"Inserici valore"];
@@ -273,13 +275,12 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	message2 = "";
 	message3 = "";
 	message4 = "";
-	Print[count];
 	(*numpassate= steps;            number of pass*)
 	(*numconfronti=comparisons;     number comparisons*)
 		 
 	(*check if the number of pass is correct*)
 	 answerButton1 = Button["Controlla",
-						Dynamic[If [input1 == n/2, 
+						Dynamic[If [input1 == N[n/2,0], 
 							message1 = "Risposta corretta!", (*if the answare is correct*)
 							message1 = "Risposta sbagliata!"](*if the answare is wrong*) 
 							]];
@@ -302,12 +303,14 @@ BubbleSortQuiz[start_, optimized_:False]:=
 							
 	ClearAll[input1,input2,input3];
 							
-	(*return the graphics elements*)						
-	Grid[{{arrayDisplay},{}}]
-	Grid[{{Text[Style["QUIZ:",Large,Bold,Red]]},{Text["Quante passate fa l'algoritmo per riordinare l'array?"]},{element1, answerButton1, Dynamic[message1]}, 
-	{},{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"]},
-	{element2, answerButton2, Dynamic[message2]}, {},{Text["Quanti scambi devi fare nella prima passata dell'algoritmo?"]},
-	{element3, answerButton3, Dynamic[message3]},{}}]]; 
+	(*return the graphics elements*)
+	arr=Row[Part[currentArray],Background->Lighter[Gray, 0.5]];
+	prima=Row[{Text["Quante passate fa l'algoritmo per riordinare l'array?"] ,Spacer[63],element1 ,Spacer[20],answerButton1 ,Spacer[20],Dynamic[message1]}];
+	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"],Spacer[20],element2,Spacer[20],answerButton2,Spacer[20], Dynamic[message2]}];
+	terza=Row[{Text["Quanti scambi devi fare nella prima passata dell'algoritmo?"],Spacer[20],element3,Spacer[20],answerButton3,Spacer[20], Dynamic[message3]}];
+	Column[{arr,Text[Style["QUIZ:",Large,Bold,Red]],prima,seconda,terza}]						
+	]; 
+	
 
 End[]
 
