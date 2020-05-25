@@ -280,14 +280,14 @@ BubbleSortQuiz[start_, optimized_:False]:=
 		 
 	(*check if the number of pass is correct*)
 	 answerButton1 = Button["Controlla",
-						Dynamic[If [input1 == N[n/2,0], 
+						Dynamic[If [input1 == (n-1), 
 							message1 = "Risposta corretta!", (*if the answare is correct*)
 							message1 = "Risposta sbagliata!"](*if the answare is wrong*) 
 							]];
 
 	(*check if the number of comparisons is correct*)
 	 answerButton2 = Button["Controlla",		
-						Dynamic[If[ input2 == (n*(n-1))/2, 
+						Dynamic[If[ input2 == (n-1)^2, 
 							message2 = "Risposta corretta!", (*if the answare is correct*)
 							message2 = "Risposta sbagliata!"](*if the answare is wrong*) 
 							]];
