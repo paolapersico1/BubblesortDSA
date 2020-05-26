@@ -242,7 +242,7 @@ StartBubbleSortQuiz[optimized_:False] :=
 		If[MatchQ[inputArray, { (0|1|2|3|4|5|6|7|8|9)..}], 
 			start = Map[NumberToCard,inputArray ];
 			(*if the length of the array is the same as the one selected, start the game*)
-			If[Length[start] == len, quiz=BubbleSortQuiz[start,opt],  quiz = "Lunghezza array sbagliata"], 
+			If[Length[start] == len, quiz=BubbleSortQuiz[start],  quiz = "Lunghezza array sbagliata"], 
 			quiz = "L'array pu\[OGrave] contenere solo numeri da 0 a 9"]]
 			];
 			
@@ -253,20 +253,16 @@ StartBubbleSortQuiz[optimized_:False] :=
 	      	      
 	      	      	      	      
 (*function that takes the input answer and check if it is correct *)
-BubbleSortQuiz[start_, optimized_:False]:=
-	DynamicModule[{originalArray = start, opt = optimized,array,n, i,steps,count,frames, currentArray, arrayDisplay,input1= Null,input2= Null,input3= Null}, 
-	currentArray = originalArray;    (*current state of the array*)
-	array=currentArray;
-	count=0;
-	n=Length[currentArray];
-	frames = List[List[array],List[{}], List[{}]];
+BubbleSortQuiz[start_]:=
+	DynamicModule[{array = start , n, countpass, input1= Null,input2= Null,input3= Null}, 
+	countpass=0;
+	n=Length[array];
 	(*calculate the number of exchanges first pass*)
 	Do[
-			(*compare adjacent elements and swap if  in wrong order*)
-			If[CardToNumber[array[[j]]]> CardToNumber[array[[j+1]]], 
-				count=count+1   (*storage variable of exchanges pass*)
-				],{j,0,n-1}];
-				
+			(*compare adjacent elements*)
+			If[CardToNumber[array[[j]]]> CardToNumber[array[[j+1]]], countpass=countpass+1 , True   (*storage variable of exchanges iteration*)
+				],{j,0,n-1}];  
+							
 	element1 = InputField[Dynamic[input1],Number, FieldHint->"Inserici valore"]; 
 	element2 = InputField[Dynamic[input2],Number, FieldHint->"Inserici valore"];
 	element3 = InputField[Dynamic[input3],Number, FieldHint->"Inserici valore"];
@@ -291,9 +287,9 @@ BubbleSortQuiz[start_, optimized_:False]:=
 							]];
 							
 	
-	(*check if number of exchanges first pass is correct*)	
+	(*check if number of exchanges first iteration is correct*)	
 	answerButton3 = Button["Controlla",	
-						Dynamic[If[input3 == count, 
+						Dynamic[If[input3 == countpass, 
 							message3 = Style["Risposta corretta!",Darker[Green], Bold], (*if the answare is correct*)
 							message3 = Style["Risposta sbagliata!",Red,Bold]] (*if the answare is wrong*) 
 							]];
@@ -302,7 +298,7 @@ BubbleSortQuiz[start_, optimized_:False]:=
 	ClearAll[input1,input2,input3];
 							
 	(*return the graphics elements*)
-	arr=Row[Part[currentArray],Background->Lighter[Gray, 0.5]];
+	arr=Row[Part[array],Background->Lighter[Gray, 0.5]];
 	prima=Row[{Text["Quante passate fa l'algoritmo per riordinare l'array?"] ,Spacer[63],element1 ,Spacer[20],answerButton1 ,Spacer[20],Dynamic[message1]}];
 	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"],Spacer[20],element2,Spacer[20],answerButton2,Spacer[20], Dynamic[message2]}];
 	terza=Row[{Text["Quanti scambi devi fare nella prima passata dell'algoritmo?"],Spacer[20],element3,Spacer[20],answerButton3,Spacer[20], Dynamic[message3]}];
