@@ -39,18 +39,17 @@ NumberToCard[num_]:=
 	color = RandomInteger[{0,3}];  (*number expressing a random color*)
 	Part[cards, num+1 + 10*color]];
 
-(*Function to count the number of swaps of Bubble Sort*)	
-BubbleSortSwaps[list_, optimized_:False]:=
-	Module[{l = list, opt = optimized, i, j, len = Length[list], n, count = 0},
+(*Function to count the number of comparisons of Bubble Sort*)	
+BubbleSortComparisons[length_, optimized_:False]:=
+	Module[{len = length, opt = optimized, i, j,  n, count = 0},
 	n = len;
 	(*for len-1 times*)
 	Do[
 		(*for n-1 times*)
 		Do[
-			(*compare adjacent elements and increment counter if in wrong order*)
-			If[l[[j]]> l[[j+1]], count=count+1,True],
+			count=count+1,
 		{j,1,n-1}]; 
-		(*if optimized bubblesort, add final elements and consider one less element to compare*)
+		(*if optimized bubblesort, consider one less element to compare*)
 		If[opt, n = n-1, True],
 	{i,1,len-1}] ;
 	count];
@@ -198,13 +197,11 @@ BubbleSortGame[start_, optimized_:False] :=
 (*Function to plot the Bubble Sort complexity compared to x squared*)	
 PlotBubbleSort[lunghezza_]:=
 	Manipulate[ 
-		(*create a list of 500 random elements*)
-		list = Table[RandomInteger[9],500];
 		(*compute the number of bubblesort swaps for lists with different length (up to the user input)*)
-		timingBubbleSort = Table[{n,BubbleSortSwaps[Take[list,n]]}, {n,50,lunghezza, 50}];
+		timingBubbleSort = Table[{n,BubbleSortComparisons[n]}, {n,50,lunghezza, 50}];
 		(*plot x squared in blue*)
-		Show[Plot[x^2, {x,0,500}, PlotLegends-> {Superscript["x",2]} ,
-			PlotStyle -> Blue, AxesLabel->{"lunghezza array", "Numero di scambi"}],
+		Show[Plot[n^2, {n,0,500}, PlotLegends-> {Superscript["n",2]} ,
+			PlotStyle -> Blue, AxesLabel->{"lunghezza array", "Numero di confronti"}],
 		(*plot the number of swaps for the lists*)
 		ListPlot[timingBubbleSort , PlotStyle-> Red,PlotLegends-> {"Bubble Sort"} ], PlotRange->All],
 		{lunghezza, 50,500,50}
@@ -212,17 +209,17 @@ PlotBubbleSort[lunghezza_]:=
 
 (*Function to plot the Bubble Sort complexity compared to its optimized version*)
 PlotOptimizedBubbleSort[lunghezza_]:=
-Manipulate[ 
-	(*create a list of 500 random elements*)
-	list = Table[RandomInteger[9],500];
-	(*compute the number of bubblesort swaps for lists with different length (up to the user input)*)
-	timingBubbleSort = Table[{n,BubbleSortSwaps[Take[list,n]]}, {n,50,lunghezza, 50}];
-	(*do the same with optimized bubblesort*)
-	optTimingBubbleSort = Table[{n,BubbleSortSwaps[Take[list,n], True]}, {n,50,lunghezza, 50}];
-	(*plot the number of swaps of the different bubblesort versions*)
-	ListPlot[{timingBubbleSort ,optTimingBubbleSort }, PlotLegends-> {"classico","ottimizato"}, AxesLabel->{"lunghezza array", "Numero di scambi"}],
-	{lunghezza, 50,500,50}
-]
+	Manipulate[ 
+		(*create a list of 500 random elements*)
+		list = Table[RandomInteger[9],500];
+		(*compute the number of bubblesort swaps for lists with different length (up to the user input)*)
+		timingBubbleSort = Table[{n,BubbleSortComparisons[n]}, {n,50,lunghezza, 50}];
+		(*do the same with optimized bubblesort*)
+		optTimingBubbleSort = Table[{n,BubbleSortComparisons[n, True]}, {n,50,lunghezza, 50}];
+		(*plot the number of swaps of the different bubblesort versions*)
+		ListPlot[{timingBubbleSort ,optTimingBubbleSort }, PlotLegends-> {"classico","ottimizzato"}, AxesLabel->{"lunghezza array", "Numero di confronti"}],
+		{lunghezza, 50,500,50}
+	]
 
 
  (*Function to start the bubblesort quiz*)
