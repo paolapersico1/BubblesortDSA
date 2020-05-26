@@ -4,13 +4,10 @@
 (* :Context:BubbleSortDSA`*)
 (* :Author:PaolaPersico,CarmeloCaruso,MelaniaGhelli,IlariaRinaldi*)
 (* :Summary:an interactive Bubblesort lesson for DSA students*)
-(* :Copyright:*)
+(* :Copyright:Licenza Creative Commons Attribuzione 4.0 Internazionale*)
 (* :Package Version:1*)
 (* :Mathematica Version:12.1*)
-(* :History:*)
 (* :Keywords:bubblesort,dsa*)
-(* :Sources:biblio*)
-(* :Discussion:*)
 
 BeginPackage["BubbleSortDSA`"]
 
