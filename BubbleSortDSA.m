@@ -202,7 +202,7 @@ PlotBubbleSort[lunghezza_]:=
 			PlotStyle -> Blue, AxesLabel->{"lunghezza del vettore", "Numero di confronti"}],
 		(*plot the number of swaps for the lists*)
 		ListPlot[timingBubbleSort , PlotStyle-> {Red, PointSize[Medium]}, PlotLegends-> {"Bubble Sort"} ], PlotRange->All],
-		{lunghezza, 50,500,50}
+		{lunghezza, 50,500,50}, ControlPlacement->Top
 	]
 
 (*Function to plot the Bubble Sort complexity compared to its optimized version*)
@@ -217,7 +217,7 @@ PlotOptimizedBubbleSort[lunghezza_]:=
 		(*plot the number of swaps of the different bubblesort versions*)
 		ListPlot[{timingBubbleSort ,optTimingBubbleSort }, PlotLegends-> {"classico","ottimizzato"}, 
 				PlotMarkers -> {Automatic, Medium}, AxesLabel->{"lunghezza del vettore", "Numero di confronti"}],
-		{lunghezza, 50,500,50}
+		{lunghezza, 50,500,50}, ControlPlacement->Top
 	]
 
 (*function that takes the input answer and check if it is correct *)
