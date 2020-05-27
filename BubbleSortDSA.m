@@ -37,7 +37,7 @@ NumberToCard[num_]:=
 
 (*Function to count the number of comparisons of Bubble Sort*)	
 BubbleSortComparisons[length_, optimized_:False]:=
-	Module[{len = length, opt = optimized, i, j,  n, count = 0},
+	Module[{len = length, opt = optimized,  n, count = 0},
 	n = len;
 	(*for len-1 times*)
 	Do[
@@ -116,13 +116,13 @@ BubbleSortAnimation[length_, toggler_, optimized_:False] :=
 
 (*Function to start the bubblesort game*)
 StartBubbleSortExercise[type_:"Quiz"] := 
-	DynamicModule[{inputArray = Null, len = 6, start, message = "", exercise = ""},
+	DynamicModule[{inputArray = Null, len = 4, start, message = "", exercise = ""},
 	(*radiobuttonbar to select the length of the array*)
 	lengthBar = RadioButtonBar[Dynamic[len],Range[1,6]];
 	(*array in input*)
-	elements = InputField[Dynamic[inputArray], FieldHint-> "{0,1,2,3,4,5}"]; 
+	elements = InputField[Dynamic[inputArray], FieldHint-> "0,1,2,3,4,5"]; 
 	(*button to create the cards array and start the game*)    
-	createButton = Button["Crea nuovo array", 
+	createButton = Button["Crea nuovo vettore", 
 	If[SameQ[inputArray, Null], (*if the user hasn't specified an array*)
 		(*a random array with the selected length is created*)
 		start = Table[NumberToCard[RandomInteger[9]], len]; 
@@ -130,17 +130,18 @@ StartBubbleSortExercise[type_:"Quiz"] :=
 		inputArray = Null; 
 		message = "",
 		(*otherwise we check if the input is a list of integers between 0 and 9*)
-		If[MatchQ[inputArray, { (0|1|2|3|4|5|6|7|8|9)..}], 
-			start = Map[NumberToCard,inputArray ];
+		start = ToExpression[StringJoin["{", Part[inputArray,1,1], "}"]];
+		If[MatchQ[start, {(0|1|2|3|4|5|6|7|8|9)..}], 
+			start = Map[NumberToCard, start];
 			(*if the length of the array is the same as the one selected, start the game*)
 			If[Length[start] == len, 
 				If[type == "Game", exercise = BubbleSortGame[start], exercise = BubbleSortQuiz[start]]; 
 				inputArray = Null; message = "", 
-		        message = "Lunghezza array sbagliata"], 
-			message = "L'array pu\[OGrave] contenere solo interi da 0 a 9"]]];
+		        message = "Numero di elementi del vettore non corrispondente"], 
+			message = "Il vettore pu\[OGrave] contenere solo interi tra 0 e 9 separati da virgole"]]];
 
 	(*return the graphics elements*)
-	inputGrid = Grid[{{"lunghezza dell'array:", lengthBar}, {"array:", elements},{createButton}}, Alignment->Left];
+	inputGrid = Grid[{{"numero di elementi del vettore:", lengthBar}, {"vettore:", elements},{createButton}}, Alignment->Left];
   Grid[{{inputGrid }, {Dynamic[Style[message, Red]]}, {}, {Dynamic[exercise]} }, Alignment->Left] ];
 
 (*Function that takes an array as input and implements the bubblesort game*)
@@ -184,7 +185,7 @@ BubbleSortGame[start_, optimized_:False] :=
 	finishButton = Button["Ho finito!", 
 					Dynamic[If[swapNumber == Length[steps],   (*check if they reached the final step*)
 								enabled = False;    (*disable the swap button*)
-								message = Style["Complimenti, l'array \[EGrave] ordinato! \[HappySmiley]", Darker[Green], Bold],
+								message = Style["Complimenti, il vettore \[EGrave] ordinato! \[HappySmiley]", Darker[Green], Bold],
 								message = Style["Non hai ancora finito...", Red]]]];
 
 	(*display elements of the game*)
@@ -198,9 +199,9 @@ PlotBubbleSort[lunghezza_]:=
 		timingBubbleSort = Table[{n,BubbleSortComparisons[n]}, {n,50,lunghezza, 50}];
 		(*plot x squared in blue*)
 		Show[Plot[n^2, {n,0,500}, PlotLegends-> {Superscript["n",2]} ,
-			PlotStyle -> Blue, AxesLabel->{"lunghezza array", "Numero di confronti"}],
+			PlotStyle -> Blue, AxesLabel->{"lunghezza del vettore", "Numero di confronti"}],
 		(*plot the number of swaps for the lists*)
-		ListPlot[timingBubbleSort , PlotStyle-> Red,PlotLegends-> {"Bubble Sort"} ], PlotRange->All],
+		ListPlot[timingBubbleSort , PlotStyle-> {Red, PointSize[Medium]}, PlotLegends-> {"Bubble Sort"} ], PlotRange->All],
 		{lunghezza, 50,500,50}
 	]
 
@@ -214,7 +215,8 @@ PlotOptimizedBubbleSort[lunghezza_]:=
 		(*do the same with optimized bubblesort*)
 		optTimingBubbleSort = Table[{n,BubbleSortComparisons[n, True]}, {n,50,lunghezza, 50}];
 		(*plot the number of swaps of the different bubblesort versions*)
-		ListPlot[{timingBubbleSort ,optTimingBubbleSort }, PlotLegends-> {"classico","ottimizzato"}, AxesLabel->{"lunghezza array", "Numero di confronti"}],
+		ListPlot[{timingBubbleSort ,optTimingBubbleSort }, PlotLegends-> {"classico","ottimizzato"}, 
+				PlotMarkers -> {Automatic, Medium}, AxesLabel->{"lunghezza del vettore", "Numero di confronti"}],
 		{lunghezza, 50,500,50}
 	]
 
@@ -231,9 +233,9 @@ BubbleSortQuiz[start_]:=
 			countpass=countpass+1, True],   
 		{j,1,n-1}];  
 							
-	element1 = InputField[Dynamic[input1],Number, FieldHint->"Inserici valore"]; 
-	element2 = InputField[Dynamic[input2],Number, FieldHint->"Inserici valore"];
-	element3 = InputField[Dynamic[input3],Number, FieldHint->"Inserici valore"];
+	element1 = InputField[Dynamic[input1],Number, FieldHint->"Inserici valore", FieldSize->Small]; 
+	element2 = InputField[Dynamic[input2],Number, FieldHint->"Inserici valore", FieldSize->Small];
+	element3 = InputField[Dynamic[input3],Number, FieldHint->"Inserici valore", FieldSize->Small];
 	message1 = "";
 	message2 = "";
 	message3 = "";
@@ -267,10 +269,10 @@ BubbleSortQuiz[start_]:=
 							
 	(*return the graphics elements*)
 	arr=Row[Part[start],Background->Lighter[Gray, 0.5]];
-	prima=Row[{Text["Quante passate fa l'algoritmo per riordinare l'array?"] ,Spacer[63],element1 ,Spacer[20],answerButton1 ,Spacer[20],Dynamic[message1]}];
-	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"],Spacer[20],element2,Spacer[20],answerButton2,Spacer[20], Dynamic[message2]}];
-	terza=Row[{Text["Quanti scambi devi fare nella prima passata dell'algoritmo?"],Spacer[20],element3,Spacer[20],answerButton3,Spacer[20], Dynamic[message3]}];
-	Column[{arr,Text[Style["QUIZ:",Large,Bold,Red]],prima,seconda,terza}]]; 
+	prima=Row[{Text["Quante passate deve fare l'algoritmo per riordinare l'array?"], Spacer[63], element1, Spacer[20], answerButton1, Spacer[20], Dynamic[message1]}];
+	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"], Spacer[20],element2,Spacer[20], answerButton2, Spacer[20], Dynamic[message2]}];
+	terza=Row[{Text["Quanti scambi deve fare l'algoritmo nella prima passata?"], Spacer[20], element3, Spacer[20], answerButton3, Spacer[20], Dynamic[message3]}];
+	Column[{arr, Text[Style["QUIZ:", Large, Bold, Red]], prima, seconda, terza}]]; 
 	
 
 End[]
