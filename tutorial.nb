@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    586275,      10133]
-NotebookOptionsPosition[    575309,       9934]
-NotebookOutlinePosition[    577089,       9974]
-CellTagsIndexPosition[    577009,       9969]
+NotebookDataLength[    587273,      10151]
+NotebookOptionsPosition[    576255,       9950]
+NotebookOutlinePosition[    578040,       9990]
+CellTagsIndexPosition[    577960,       9985]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,7 +36,7 @@ Cell[BoxData[{
  CellChangeTimes->{{3.79897765234194*^9, 3.798977653080982*^9}, {
   3.798977937173231*^9, 3.798977937699261*^9}, {3.798978139538806*^9, 
   3.798978140068836*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"84f24c02-98de-4f28-b210-6b875be66b4c"],
+ CellLabel->"In[22]:=",ExpressionUUID->"84f24c02-98de-4f28-b210-6b875be66b4c"],
 
 Cell[CellGroupData[{
 
@@ -8481,7 +8481,7 @@ Cell[BoxData[
    3.79869645573247*^9, 3.79869647350816*^9}, {3.79869654143468*^9, 
    3.7986965650031977`*^9}, 3.798978332297831*^9, 3.7989783657737455`*^9},
  TextAlignment->Right,
- CellLabel->"In[12]:=",ExpressionUUID->"cc7d5490-62bf-414c-b469-f5d0d4a880f8"],
+ CellLabel->"In[26]:=",ExpressionUUID->"cc7d5490-62bf-414c-b469-f5d0d4a880f8"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -8499,9 +8499,10 @@ Cell[BoxData[
    3.799480809278925*^9, 3.7994809291657825`*^9, 3.7994811488213463`*^9, 
    3.7995854398012176`*^9, 3.799588715432573*^9, 3.799588837124533*^9, 
    3.799588980885756*^9, 3.799589128502199*^9, 3.799589246372941*^9, 
-   3.7995893934483533`*^9, 3.799589654634292*^9, 3.799589808506093*^9},
+   3.7995893934483533`*^9, 3.799589654634292*^9, 3.799589808506093*^9, 
+   3.7995938061517453`*^9, 3.799593848996196*^9},
  TextAlignment->Right,
- CellLabel->"Out[12]=",ExpressionUUID->"db521918-158a-431b-af12-97fb9be38f2f"]
+ CellLabel->"Out[26]=",ExpressionUUID->"795c8faf-63d4-45ee-9cce-53254d01a2ab"]
 }, Open  ]]
 }, Open  ]],
 
@@ -8665,7 +8666,7 @@ Cell[BoxData[
      RowBox[{"EvaluationNotebook", "[", "]"}]}]}], "\n", "\n", 
    "nbTOC"}]}]], "Code",
  CellChangeTimes->{{3.799131230669429*^9, 3.799131245121373*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"3a3a218a-c275-43d1-a9d2-7fb517e01ee9"],
+ CellLabel->"In[27]:=",ExpressionUUID->"3a3a218a-c275-43d1-a9d2-7fb517e01ee9"],
 
 Cell[BoxData["nbTOC"], "Output",
  CellChangeTimes->{{3.799213780418707*^9, 3.799213781782386*^9}, {
@@ -8682,8 +8683,10 @@ Cell[BoxData["nbTOC"], "Output",
    3.7995889793056655`*^9, 3.799588980932759*^9}, {3.7995891268981075`*^9, 
    3.799589128550202*^9}, {3.799589244793851*^9, 3.7995892464189434`*^9}, {
    3.7995893918452616`*^9, 3.799589393496356*^9}, {3.79958965249717*^9, 
-   3.799589654736298*^9}, {3.7995898068930006`*^9, 3.799589808554096*^9}},
- CellLabel->"Out[15]=",ExpressionUUID->"1a82c284-410b-4649-ba46-6a08911fe1c6"]
+   3.799589654736298*^9}, {3.7995898068930006`*^9, 3.799589808554096*^9}, 
+   3.799593765983448*^9, {3.7995938042286353`*^9, 3.799593806204748*^9}, 
+   3.7995938490361986`*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"51b21b0e-85ba-43df-94b1-b3c4ed66e846"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -8905,7 +8908,7 @@ Cell[BoxData[
   3.7989774926008034`*^9}, {3.7989778251598244`*^9, 3.7989778314821863`*^9}, {
   3.7989778869133563`*^9, 3.798977890104539*^9}, {3.7989780555250006`*^9, 
   3.798978055829018*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"d6dbb34a-3f36-4858-9ff5-17ff3216fbfe"],
+ CellLabel->"In[30]:=",ExpressionUUID->"d6dbb34a-3f36-4858-9ff5-17ff3216fbfe"],
 
 Cell[BoxData[
  TagBox[
@@ -8914,7 +8917,7 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`esecuzione$$], 1, 35, 1}}, Typeset`size$$ = {
+      Hold[$CellContext`esecuzione$$], 1, 33, 1}}, Typeset`size$$ = {
     779., {89.75, 94.25}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -8925,18 +8928,18 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Private`CreateArrayGrid[
-        Part[Private`steps$8602, $CellContext`esecuzione$$], 
-        Part[Private`comparisons$8602, $CellContext`esecuzione$$], 
-        Part[Private`final$8602, $CellContext`esecuzione$$]], 
-      "Specifications" :> {{$CellContext`esecuzione$$, 1, 35, 1, 
-         DefaultDuration -> 35, AnimationRepetitions -> 1, AnimationRunning -> 
+        Part[Private`steps$13419, $CellContext`esecuzione$$], 
+        Part[Private`comparisons$13419, $CellContext`esecuzione$$], 
+        Part[Private`final$13419, $CellContext`esecuzione$$]], 
+      "Specifications" :> {{$CellContext`esecuzione$$, 1, 33, 1, 
+         DefaultDuration -> 33, AnimationRepetitions -> 1, AnimationRunning -> 
          False, AppearanceElements -> {
           "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
            "DirectionButton"}}}, 
       "Options" :> {
        ControlPlacement -> Top, ControlType -> Animator, AppearanceElements -> 
         None, DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
-        "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 70.}, 
+        "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 66.}, 
       "DefaultOptions" :> {}],
      ImageSizeCache->{814., {116.75, 121.25}},
      SingleEvaluation->True],
@@ -8958,8 +8961,9 @@ Cell[BoxData[
   3.799480929267788*^9, 3.799481148929352*^9, 3.7995854399942284`*^9, 
   3.7995887156155834`*^9, 3.7995888372495403`*^9, 3.7995889810167637`*^9, 
   3.7995891286292067`*^9, 3.7995892464879475`*^9, 3.799589393581361*^9, 
-  3.7995896548813066`*^9, 3.7995898086341004`*^9},
- CellLabel->"Out[16]=",ExpressionUUID->"83c19ef3-00f0-4342-9000-944eb4f98ba2"]
+  3.7995896548813066`*^9, 3.7995898086341004`*^9, 3.799593806283753*^9, 
+  3.799593849103202*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"a81d0889-f317-48e3-80f9-56220b477896"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -9025,6 +9029,7 @@ Cell[BoxData[{
     RowBox[{"A", "[", "j", "]"}], " ", "e", " ", 
     RowBox[{"A", "[", 
      RowBox[{"j", " ", "+", " ", "1"}], "]"}]}]}]}]}], "Code",
+ Evaluatable->False,
  CellChangeTimes->{{3.798870591758334*^9, 3.79887062546972*^9}, {
    3.798870870812434*^9, 3.798870939844254*^9}, 3.798871059339486*^9, {
    3.798871172014866*^9, 3.798871228392694*^9}, {3.798874538187743*^9, 
@@ -9032,9 +9037,11 @@ Cell[BoxData[{
    3.798973746621591*^9, 3.798973761441986*^9}, {3.7989739792612886`*^9, 
    3.798974016049981*^9}, {3.799480772554825*^9, 3.7994807819223604`*^9}, {
    3.799480814861244*^9, 3.7994808207355804`*^9}, {3.799480851238325*^9, 
-   3.7994809603945684`*^9}, {3.799481004881113*^9, 3.7994811062749124`*^9}},
+   3.7994809603945684`*^9}, {3.799481004881113*^9, 3.7994811062749124`*^9}, {
+   3.799593643020415*^9, 3.799593647712683*^9}},
  EmphasizeSyntaxErrors->True,
- CellLabel->"In[17]:=",ExpressionUUID->"c0c8561f-7ff7-4e66-8b08-80025a1d201e"],
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"c0c8561f-7ff7-4e66-8b08-80025a1d201e"],
 
 Cell["\<\
 dove con la funzione \[OpenCurlyDoubleQuote]scambia\[CloseCurlyDoubleQuote] \
@@ -9093,250 +9100,10 @@ Cell[BoxData[
   3.7992684302239513`*^9}, {3.7992685076463795`*^9, 3.7992685104485397`*^9}, {
   3.7992686187997375`*^9, 3.7992686208878565`*^9}, {3.7994788422374167`*^9, 
   3.7994788492788196`*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"a7b09e1a-3591-4436-98c3-b5929aca5806"],
+ CellLabel->"In[31]:=",ExpressionUUID->"a7b09e1a-3591-4436-98c3-b5929aca5806"],
 
 Cell[BoxData[
- DynamicModuleBox[{Private`inputArray$$ = RawBoxes[
-   RowBox[{"1", ",", "2", ",", "3"}]], Private`len$$ = 3, Private`start$$, 
-  Private`message$$ = RawBoxes[
-   RowBox[{"1", ",", "2", ",", "3"}]], Private`exercise$$ = ""}, 
-  TagBox[GridBox[{
-     {
-      TagBox[GridBox[{
-         {"\<\"numero di elementi del vettore:\"\>", 
-          InterpretationBox[
-           StyleBox[
-            RowBox[{GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {1},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["1", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}], "  ", GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {2},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["2", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}], "  ", GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {3},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["3", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}], "  ", GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {4},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["4", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}], "  ", GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {5},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["5", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}], "  ", GridBox[{
-               {
-                RadioButtonBox[Dynamic[Private`len$$], {6},
-                 DefaultBaseStyle->"RadioButtonBar"], 
-                StyleBox["6", "RadioButtonBarLabel",
-                 StripOnInput->False]}
-              },
-              AutoDelete->False,
-              BaselinePosition->{1, 2},
-              
-              GridBoxAlignment->{
-               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-              GridBoxSpacings->{"Columns" -> {
-                  Offset[0.27999999999999997`], {
-                   Offset[0.21]}, 
-                  Offset[0.27999999999999997`]}, "Rows" -> {
-                  Offset[0.2], {
-                   Offset[0.4]}, 
-                  Offset[0.2]}}]}], "Deploy"],
-           RadioButtonBar[
-            Dynamic[Private`len$$], {1, 2, 3, 4, 5, 6}]]},
-         {"\<\"array:\"\>", 
-          InputFieldBox[Dynamic[Private`inputArray$$],
-           FieldHint->"{0,1,2,3,4,5}"]},
-         {
-          ButtonBox["\<\"Crea nuovo vettore\"\>",
-           Appearance->Automatic,
-           
-           ButtonFunction:>If[
-            Private`inputArray$$ === Null, Private`start$$ = Table[
-                Private`NumberToCard[
-                 RandomInteger[9]], Private`len$$]; 
-             If["Quiz" == "Game", Private`exercise$$ = 
-               Private`BubbleSortGame[Private`start$$], Private`exercise$$ = 
-               Private`BubbleSortQuiz[Private`start$$]]; 
-             Private`inputArray$$ = Null; Private`message$$ = "", 
-             If[
-              MatchQ[
-               Join["{", Private`inputArray$$, "}"], {
-                Repeated[
-                 Alternatives[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]}], 
-              Private`start$$ = 
-               Map[Private`NumberToCard, Private`inputArray$$]; 
-              If[Length[Private`start$$] == Private`len$$, 
-                If["Quiz" == "Game", Private`exercise$$ = 
-                  Private`BubbleSortGame[Private`start$$], Private`exercise$$ = 
-                  Private`BubbleSortQuiz[Private`start$$]]; 
-                Private`inputArray$$ = Null; Private`message$$ = "", 
-                Private`message$$ = 
-                "Numero di elementi del vettore sbagliato"], 
-              Private`message$$ = Private`inputArray$$]],
-           Evaluator->Automatic,
-           Method->"Preemptive"], ""}
-        },
-        AutoDelete->False,
-        GridBoxAlignment->{"Columns" -> {{Left}}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"]},
-     {
-      DynamicBox[ToBoxes[
-        Style[Private`message$$, Red], StandardForm],
-       ImageSizeCache->{33.5, {2., 7.}}]},
-     {""},
-     {
-      DynamicBox[ToBoxes[Private`exercise$$, StandardForm],
-       ImageSizeCache->{0., {0., 5.}}]}
-    },
-    AutoDelete->False,
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"],
-  DynamicModuleValues:>{}]], "Output",
- CellChangeTimes->{3.799475418286578*^9, 3.799476446656398*^9, 
-  3.7994769001253347`*^9, 3.799477880507409*^9, 3.7994808096839485`*^9, 
-  3.7994809294677997`*^9, 3.799481149151365*^9, 3.7995854404622555`*^9, 
-  3.799588715888599*^9, 3.7995888375975604`*^9, 3.7995889813807845`*^9, 
-  3.799589128973226*^9, 3.799589246688959*^9, 3.799589393938381*^9, 
-  3.799589655487341*^9, 3.7995898089921207`*^9},
- CellLabel->"Out[17]=",ExpressionUUID->"5e0da908-3292-464b-af1a-9e60a3713904"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["", "SlideShowNavigationBar",
- CellTags->
-  "SlideShowHeader",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962"],
-
-Cell[CellGroupData[{
-
-Cell["Mettiti alla prova!", "Section",
- CellChangeTimes->{{3.7980084369675417`*^9, 
-  3.7980084390425043`*^9}},ExpressionUUID->"501a781d-6fa2-408c-a21d-\
-b0af7fd5a8e7"],
-
-Cell["\<\
-Crea un nuovo vettore come nell\[CloseCurlyQuote]esercizio della slide \
-precedente, e prova ad ordinarlo selezionando gli elementi da scambiare a \
-ogni passo, verificando di volta in volta se lo scambio \[EGrave] corretto. \
-Quando hai finito, clicca su \[OpenCurlyDoubleQuote]Ho finito!\
-\[CloseCurlyDoubleQuote] per controllare il risultato!\
-\>", "Text",
- CellChangeTimes->{{3.798008442803381*^9, 3.7980084762012444`*^9}, {
-   3.7981822072668343`*^9, 3.798182208656321*^9}, 3.798872122450163*^9, {
-   3.7995857639817595`*^9, 3.7995858466964903`*^9}, 3.7995876994654627`*^9, {
-   3.7995878072796297`*^9, 
-   3.799587808820718*^9}},ExpressionUUID->"70831851-df78-471f-85d0-\
-46c887e149b6"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"StartBubbleSortExercise", "[", "\"\<Game\>\"", "]"}]], "Input",
- CellOpen->False,
- CellChangeTimes->{{3.7989779125228214`*^9, 3.7989779171240845`*^9}, {
-  3.799478870279021*^9, 3.7994788764133716`*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"25e2c954-d33c-4a1d-871c-5f4952e1f0be"],
-
-Cell[BoxData[
- DynamicModuleBox[{Private`inputArray$$ = Null, Private`len$$ = 6, 
+ DynamicModuleBox[{Private`inputArray$$ = Null, Private`len$$ = 4, 
   Private`start$$, Private`message$$ = "", Private`exercise$$ = ""}, 
   TagBox[GridBox[{
      {
@@ -9473,9 +9240,251 @@ Cell[BoxData[
                   Offset[0.2]}}]}], "Deploy"],
            RadioButtonBar[
             Dynamic[Private`len$$], {1, 2, 3, 4, 5, 6}]]},
-         {"\<\"array:\"\>", 
+         {"\<\"vettore:\"\>", 
           InputFieldBox[Dynamic[Private`inputArray$$],
-           FieldHint->"{0,1,2,3,4,5}"]},
+           FieldHint->"0,1,2,3,4,5"]},
+         {
+          ButtonBox["\<\"Crea nuovo vettore\"\>",
+           Appearance->Automatic,
+           
+           ButtonFunction:>If[
+            Private`inputArray$$ === Null, Private`start$$ = Table[
+                Private`NumberToCard[
+                 RandomInteger[9]], Private`len$$]; 
+             If["Quiz" == "Game", Private`exercise$$ = 
+               Private`BubbleSortGame[Private`start$$], Private`exercise$$ = 
+               Private`BubbleSortQuiz[Private`start$$]]; 
+             Private`inputArray$$ = Null; Private`message$$ = "", 
+             Private`start$$ = ToExpression[
+                StringJoin["{", 
+                 Part[Private`inputArray$$, 1, 1], "}"]]; If[
+               MatchQ[Private`start$$, {
+                 Repeated[
+                  Alternatives[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]}], 
+               Private`start$$ = Map[Private`NumberToCard, Private`start$$]; 
+               If[Length[Private`start$$] == Private`len$$, 
+                 If["Quiz" == "Game", Private`exercise$$ = 
+                   Private`BubbleSortGame[Private`start$$], 
+                   Private`exercise$$ = 
+                   Private`BubbleSortQuiz[Private`start$$]]; 
+                 Private`inputArray$$ = Null; Private`message$$ = "", 
+                 Private`message$$ = 
+                 "Numero di elementi del vettore non corrispondente"], 
+               Private`message$$ = 
+               "Il vettore pu\[OGrave] contenere solo interi tra 0 e 9 \
+separati da virgole"]],
+           Evaluator->Automatic,
+           Method->"Preemptive"], ""}
+        },
+        AutoDelete->False,
+        GridBoxAlignment->{"Columns" -> {{Left}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]},
+     {
+      DynamicBox[ToBoxes[
+        Style[Private`message$$, Red], StandardForm],
+       ImageSizeCache->{0., {0., 5.}}]},
+     {""},
+     {
+      DynamicBox[ToBoxes[Private`exercise$$, StandardForm],
+       ImageSizeCache->{0., {0., 5.}}]}
+    },
+    AutoDelete->False,
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.799475418286578*^9, 3.799476446656398*^9, 
+  3.7994769001253347`*^9, 3.799477880507409*^9, 3.7994808096839485`*^9, 
+  3.7994809294677997`*^9, 3.799481149151365*^9, 3.7995854404622555`*^9, 
+  3.799588715888599*^9, 3.7995888375975604`*^9, 3.7995889813807845`*^9, 
+  3.799589128973226*^9, 3.799589246688959*^9, 3.799589393938381*^9, 
+  3.799589655487341*^9, 3.7995898089921207`*^9, 3.799593806478764*^9, 
+  3.7995938492542105`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"77ed4596-269c-4d63-b150-0ffc1c8fe02b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962"],
+
+Cell[CellGroupData[{
+
+Cell["Mettiti alla prova!", "Section",
+ CellChangeTimes->{{3.7980084369675417`*^9, 
+  3.7980084390425043`*^9}},ExpressionUUID->"501a781d-6fa2-408c-a21d-\
+b0af7fd5a8e7"],
+
+Cell["\<\
+Crea un nuovo vettore come nell\[CloseCurlyQuote]esercizio della slide \
+precedente, e prova ad ordinarlo selezionando gli elementi da scambiare a \
+ogni passo, verificando di volta in volta se lo scambio \[EGrave] corretto. \
+Quando hai finito, clicca su \[OpenCurlyDoubleQuote]Ho finito!\
+\[CloseCurlyDoubleQuote] per controllare il risultato!\
+\>", "Text",
+ CellChangeTimes->{{3.798008442803381*^9, 3.7980084762012444`*^9}, {
+   3.7981822072668343`*^9, 3.798182208656321*^9}, 3.798872122450163*^9, {
+   3.7995857639817595`*^9, 3.7995858466964903`*^9}, 3.7995876994654627`*^9, {
+   3.7995878072796297`*^9, 
+   3.799587808820718*^9}},ExpressionUUID->"70831851-df78-471f-85d0-\
+46c887e149b6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StartBubbleSortExercise", "[", "\"\<Game\>\"", "]"}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.7989779125228214`*^9, 3.7989779171240845`*^9}, {
+  3.799478870279021*^9, 3.7994788764133716`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"25e2c954-d33c-4a1d-871c-5f4952e1f0be"],
+
+Cell[BoxData[
+ DynamicModuleBox[{Private`inputArray$$ = Null, Private`len$$ = 4, 
+  Private`start$$, Private`message$$ = "", Private`exercise$$ = ""}, 
+  TagBox[GridBox[{
+     {
+      TagBox[GridBox[{
+         {"\<\"numero di elementi del vettore:\"\>", 
+          InterpretationBox[
+           StyleBox[
+            RowBox[{GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {1},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["1", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "  ", GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {2},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["2", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "  ", GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {3},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["3", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "  ", GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {4},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["4", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "  ", GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {5},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["5", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "  ", GridBox[{
+               {
+                RadioButtonBox[Dynamic[Private`len$$], {6},
+                 DefaultBaseStyle->"RadioButtonBar"], 
+                StyleBox["6", "RadioButtonBarLabel",
+                 StripOnInput->False]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 2},
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.21]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}]}], "Deploy"],
+           RadioButtonBar[
+            Dynamic[Private`len$$], {1, 2, 3, 4, 5, 6}]]},
+         {"\<\"vettore:\"\>", 
+          InputFieldBox[Dynamic[Private`inputArray$$],
+           FieldHint->"0,1,2,3,4,5"]},
          {
           ButtonBox["\<\"Crea nuovo vettore\"\>",
            Appearance->Automatic,
@@ -9488,21 +9497,24 @@ Cell[BoxData[
                Private`BubbleSortGame[Private`start$$], Private`exercise$$ = 
                Private`BubbleSortQuiz[Private`start$$]]; 
              Private`inputArray$$ = Null; Private`message$$ = "", 
-             If[
-              MatchQ[
-               Join["{", Private`inputArray$$, "}"], {
-                Repeated[
-                 Alternatives[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]}], 
-              Private`start$$ = 
-               Map[Private`NumberToCard, Private`inputArray$$]; 
-              If[Length[Private`start$$] == Private`len$$, 
-                If["Game" == "Game", Private`exercise$$ = 
-                  Private`BubbleSortGame[Private`start$$], Private`exercise$$ = 
-                  Private`BubbleSortQuiz[Private`start$$]]; 
-                Private`inputArray$$ = Null; Private`message$$ = "", 
-                Private`message$$ = 
-                "Numero di elementi del vettore sbagliato"], 
-              Private`message$$ = Private`inputArray$$]],
+             Private`start$$ = ToExpression[
+                StringJoin["{", 
+                 Part[Private`inputArray$$, 1, 1], "}"]]; If[
+               MatchQ[Private`start$$, {
+                 Repeated[
+                  Alternatives[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]}], 
+               Private`start$$ = Map[Private`NumberToCard, Private`start$$]; 
+               If[Length[Private`start$$] == Private`len$$, 
+                 If["Game" == "Game", Private`exercise$$ = 
+                   Private`BubbleSortGame[Private`start$$], 
+                   Private`exercise$$ = 
+                   Private`BubbleSortQuiz[Private`start$$]]; 
+                 Private`inputArray$$ = Null; Private`message$$ = "", 
+                 Private`message$$ = 
+                 "Numero di elementi del vettore non corrispondente"], 
+               Private`message$$ = 
+               "Il vettore pu\[OGrave] contenere solo interi tra 0 e 9 \
+separati da virgole"]],
            Evaluator->Automatic,
            Method->"Preemptive"], ""}
         },
@@ -9534,8 +9546,8 @@ Cell[BoxData[
   3.7994811492013674`*^9, 3.799585440568261*^9, 3.799588715962603*^9, 
   3.799588837661564*^9, 3.799588981446788*^9, 3.7995891290362296`*^9, 
   3.7995892467519627`*^9, 3.799589394004385*^9, 3.799589655571346*^9, 
-  3.7995898090581245`*^9},
- CellLabel->"Out[18]=",ExpressionUUID->"95878bf1-3971-4775-8d9f-68066ec252dc"]
+  3.7995898090581245`*^9, 3.7995938065417676`*^9, 3.799593849311214*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"296824b3-cb53-4f23-bce2-f0f79feb7246"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -9603,7 +9615,7 @@ Cell[BoxData[
  CellOpen->False,
  CellChangeTimes->{{3.7992680623949127`*^9, 3.799268076577724*^9}, {
   3.7992682259572678`*^9, 3.7992682273793497`*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"4abc5442-7b1f-45cd-a5ab-3e9e60c7f134"],
+ CellLabel->"In[33]:=",ExpressionUUID->"4abc5442-7b1f-45cd-a5ab-3e9e60c7f134"],
 
 Cell[BoxData[
  TagBox[
@@ -9629,11 +9641,10 @@ Cell[BoxData[
          Plot[Private`n^2, {Private`n, 0, 500}, PlotLegends -> {
             Superscript["n", 2]}, PlotStyle -> Blue, 
           AxesLabel -> {"lunghezza del vettore", "Numero di confronti"}], 
-         ListPlot[
-         Private`timingBubbleSort, PlotStyle -> Red, 
-          PlotLegends -> {"Bubble Sort"}], PlotRange -> All]), 
-      "Specifications" :> {{$CellContext`lunghezza$$, 50, 500, 50}}, 
-      "Options" :> {}, "DefaultOptions" :> {}],
+         ListPlot[Private`timingBubbleSort, PlotStyle -> {Red, 
+            PointSize[Medium]}, PlotLegends -> {"Bubble Sort"}], PlotRange -> 
+         All]), "Specifications" :> {{$CellContext`lunghezza$$, 50, 500, 50}},
+       "Options" :> {}, "DefaultOptions" :> {}],
      ImageSizeCache->{579., {81.75, 86.25}},
      SingleEvaluation->True],
     Deinitialization:>None,
@@ -9652,8 +9663,8 @@ Cell[BoxData[
   3.7994811492493706`*^9, 3.7995854406332655`*^9, 3.799588716030607*^9, 
   3.7995888377245674`*^9, 3.799588981514792*^9, 3.799589129098233*^9, 
   3.7995892468159666`*^9, 3.7995893940773892`*^9, 3.7995896556643515`*^9, 
-  3.799589809121128*^9},
- CellLabel->"Out[19]=",ExpressionUUID->"b8fa1e12-5eba-4f96-b137-a225cca55be2"]
+  3.799589809121128*^9, 3.7995938065977707`*^9, 3.799593849365217*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"1811644a-3ced-4c64-86a3-2c5172869a99"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -9700,7 +9711,7 @@ Cell[BoxData[
  CellOpen->False,
  CellChangeTimes->{{3.799268151351001*^9, 3.7992681640047245`*^9}, 
    3.7992682122594843`*^9},
- CellLabel->"In[20]:=",ExpressionUUID->"115b4e82-be44-40f7-b4af-0331371062a0"],
+ CellLabel->"In[34]:=",ExpressionUUID->"115b4e82-be44-40f7-b4af-0331371062a0"],
 
 Cell[BoxData[
  TagBox[
@@ -9709,7 +9720,7 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`esecuzione$$], 1, 29, 1}}, Typeset`size$$ = {
+      Hold[$CellContext`esecuzione$$], 1, 35, 1}}, Typeset`size$$ = {
     779., {89.75, 94.25}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -9720,18 +9731,18 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Private`CreateArrayGrid[
-        Part[Private`steps$9125, $CellContext`esecuzione$$], 
-        Part[Private`comparisons$9125, $CellContext`esecuzione$$], 
-        Part[Private`final$9125, $CellContext`esecuzione$$]], 
-      "Specifications" :> {{$CellContext`esecuzione$$, 1, 29, 1, 
-         DefaultDuration -> 29, AnimationRepetitions -> 1, AnimationRunning -> 
+        Part[Private`steps$13698, $CellContext`esecuzione$$], 
+        Part[Private`comparisons$13698, $CellContext`esecuzione$$], 
+        Part[Private`final$13698, $CellContext`esecuzione$$]], 
+      "Specifications" :> {{$CellContext`esecuzione$$, 1, 35, 1, 
+         DefaultDuration -> 35, AnimationRepetitions -> 1, AnimationRunning -> 
          False, AppearanceElements -> {
           "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
            "DirectionButton"}}}, 
       "Options" :> {
        ControlPlacement -> Top, ControlType -> Animator, AppearanceElements -> 
         None, DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
-        "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 58.}, 
+        "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 70.}, 
       "DefaultOptions" :> {}],
      ImageSizeCache->{814., {116.75, 121.25}},
      SingleEvaluation->True],
@@ -9751,8 +9762,8 @@ Cell[BoxData[
   3.799481149466383*^9, 3.799585441553318*^9, 3.7995887164516315`*^9, 
   3.799588838143592*^9, 3.7995889821188264`*^9, 3.7995891295142574`*^9, 
   3.7995892472409906`*^9, 3.7995893946734233`*^9, 3.799589656436395*^9, 
-  3.7995898097281632`*^9},
- CellLabel->"Out[20]=",ExpressionUUID->"e2867661-a482-492d-97d1-90b88e14f6ab"]
+  3.7995898097281632`*^9, 3.799593807087799*^9, 3.7995938496122313`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"40741c94-78c9-4880-b38b-d166be8d817d"]
 }, Open  ]],
 
 Cell["\<\
@@ -9811,15 +9822,18 @@ Cell[BoxData[{
    "ad", " ", "ogni", " ", "passaggio", " ", "si", " ", "accorcia", " ", "di",
      " ", "uno", " ", "il", " ", "ciclo", " ", "for", " ", "interno"}], 
    "*)"}], "     "}]}], "Code",
+ Evaluatable->False,
  CellChangeTimes->{{3.7988713816735697`*^9, 3.7988714312566023`*^9}, {
    3.7988745506475143`*^9, 3.7988745511551847`*^9}, {3.7988746151125517`*^9, 
    3.7988746323181868`*^9}, 3.7989033751514463`*^9, {3.798903834417571*^9, 
    3.798903852319047*^9}, {3.7989738346060667`*^9, 3.798973840697517*^9}, {
    3.798973875856444*^9, 3.79897395477872*^9}, {3.7994812805498805`*^9, 
    3.7994814009037642`*^9}, {3.799481529720132*^9, 3.7994816640578156`*^9}, {
-   3.79948174753559*^9, 3.7994817742511187`*^9}},
+   3.79948174753559*^9, 3.7994817742511187`*^9}, {3.7995938284830227`*^9, 
+   3.799593855729581*^9}},
  EmphasizeSyntaxErrors->True,
- CellLabel->"In[21]:=",ExpressionUUID->"2a68f06f-c3c5-42ce-b890-ae3d977e434d"],
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"2a68f06f-c3c5-42ce-b890-ae3d977e434d"],
 
 Cell["\<\
 Dal momento che questo algoritmo esegue un numero di operazioni minore \
@@ -9838,7 +9852,7 @@ Cell[BoxData[
  CellOpen->False,
  CellChangeTimes->{{3.7992682007238245`*^9, 3.799268202200909*^9}, {
   3.799268320123654*^9, 3.799268321584738*^9}},
- CellLabel->"In[21]:=",ExpressionUUID->"11d60dc9-9625-4c80-a575-1e02f650997e"],
+ CellLabel->"In[35]:=",ExpressionUUID->"11d60dc9-9625-4c80-a575-1e02f650997e"],
 
 Cell[BoxData[
  TagBox[
@@ -9866,6 +9880,7 @@ Cell[BoxData[
           Private`n, 50, $CellContext`lunghezza$$, 50}]; 
        ListPlot[{Private`timingBubbleSort, Private`optTimingBubbleSort}, 
          PlotLegends -> {"classico", "ottimizzato"}, 
+         PlotMarkers -> {Automatic, Medium}, 
          AxesLabel -> {"lunghezza del vettore", "Numero di confronti"}]), 
       "Specifications" :> {{$CellContext`lunghezza$$, 50, 500, 50}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
@@ -9887,8 +9902,9 @@ Cell[BoxData[
   3.79948092999483*^9, 3.7994811496513934`*^9, 3.7995854417283278`*^9, 
   3.79958871678165*^9, 3.7995888384546094`*^9, 3.7995889822788353`*^9, 
   3.799589129840276*^9, 3.799589247591011*^9, 3.7995893948174314`*^9, 
-  3.7995896566294065`*^9, 3.799589809880172*^9},
- CellLabel->"Out[21]=",ExpressionUUID->"18724bc2-6f74-429a-8ce3-0f641f67f2bf"]
+  3.7995896566294065`*^9, 3.799589809880172*^9, 3.7995938075868273`*^9, 
+  3.799593849820243*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"b5cb958f-d066-4667-9b83-dd6d0413c0a5"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -9948,191 +9964,193 @@ ExpressionUUID->"2c2adf69-dee5-46a9-bd9b-f426bdf30a31"
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[1426, 42, 4584, 98, 0, "SlideShowNavigationBar",ExpressionUUID->"0e55625c-ae26-408d-9ea6-7051b71a98ef",
+  Cell[1427, 42, 4584, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"0e55625c-ae26-408d-9ea6-7051b71a98ef",
    CellTags->"SlideShowHeader"],
-  Cell[515057, 8509, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"127a0fa4-595b-4c80-8632-d2bf4a645c05",
+  Cell[515108, 8510, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"127a0fa4-595b-4c80-8632-d2bf4a645c05",
    CellTags->"SlideShowHeader"],
-  Cell[517770, 8588, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"02773b62-4484-42e3-a1b1-b0c341d0f7f8",
+  Cell[517821, 8589, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"02773b62-4484-42e3-a1b1-b0c341d0f7f8",
    CellTags->"SlideShowHeader"],
-  Cell[522238, 8692, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"f1801abe-ff2f-49af-8e89-514739178416",
+  Cell[522391, 8695, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"f1801abe-ff2f-49af-8e89-514739178416",
    CellTags->"SlideShowHeader"],
-  Cell[534574, 8969, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"cfda7ac3-3003-43e2-9612-e7ac5b76fa80",
+  Cell[534777, 8973, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"cfda7ac3-3003-43e2-9612-e7ac5b76fa80",
    CellTags->"SlideShowHeader"],
-  Cell[548384, 9303, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962",
+  Cell[548811, 9312, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962",
    CellTags->"SlideShowHeader"],
-  Cell[558248, 9544, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"087c6d40-ab33-47ad-bd9c-b2145817a8cf",
+  Cell[558901, 9556, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"087c6d40-ab33-47ad-bd9c-b2145817a8cf",
    CellTags->"SlideShowHeader"],
-  Cell[574213, 9897, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"79814d81-afe4-471c-9e56-5106cb01833c",
+  Cell[575159, 9913, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"79814d81-afe4-471c-9e56-5106cb01833c",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 575816, 9949}
+ {"SlideShowHeader", 576762, 9965}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 843, 18, 122, "Code",ExpressionUUID->"84f24c02-98de-4f28-b210-6b875be66b4c"],
+Cell[558, 20, 844, 18, 122, "Code",ExpressionUUID->"84f24c02-98de-4f28-b210-6b875be66b4c"],
 Cell[CellGroupData[{
-Cell[1426, 42, 4584, 98, 0, "SlideShowNavigationBar",ExpressionUUID->"0e55625c-ae26-408d-9ea6-7051b71a98ef",
+Cell[1427, 42, 4584, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"0e55625c-ae26-408d-9ea6-7051b71a98ef",
  CellTags->"SlideShowHeader"],
-Cell[6013, 142, 532, 9, 113, "Title",ExpressionUUID->"f4b45978-b382-4ffa-85ff-87815da67daf"],
-Cell[6548, 153, 509, 8, 49, "Subtitle",ExpressionUUID->"e254b8d9-efd2-43cc-afc4-fc4e0f9bda7d"],
-Cell[7060, 163, 506286, 8306, 298, "Text",ExpressionUUID->"20de8f29-9570-47f9-8330-f6ff26541c0b"],
+Cell[6014, 142, 532, 9, 113, "Title",ExpressionUUID->"f4b45978-b382-4ffa-85ff-87815da67daf"],
+Cell[6549, 153, 509, 8, 49, "Subtitle",ExpressionUUID->"e254b8d9-efd2-43cc-afc4-fc4e0f9bda7d"],
+Cell[7061, 163, 506286, 8306, 298, "Text",ExpressionUUID->"20de8f29-9570-47f9-8330-f6ff26541c0b"],
 Cell[CellGroupData[{
-Cell[513371, 8473, 537, 10, 14, "Input",ExpressionUUID->"cc7d5490-62bf-414c-b469-f5d0d4a880f8",
+Cell[513372, 8473, 537, 10, 14, "Input",ExpressionUUID->"cc7d5490-62bf-414c-b469-f5d0d4a880f8",
  CellOpen->False],
-Cell[513911, 8485, 1097, 18, 25, "Output",ExpressionUUID->"db521918-158a-431b-af12-97fb9be38f2f"]
+Cell[513912, 8485, 1147, 19, 25, "Output",ExpressionUUID->"795c8faf-63d4-45ee-9cce-53254d01a2ab"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[515057, 8509, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"127a0fa4-595b-4c80-8632-d2bf4a645c05",
+Cell[515108, 8510, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"127a0fa4-595b-4c80-8632-d2bf4a645c05",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[515204, 8515, 220, 4, 50, "Section",ExpressionUUID->"a9c8634a-b5c9-4c35-bfe8-0101e7e770e9"],
-Cell[515427, 8521, 749, 14, 78, "Text",ExpressionUUID->"bc2a3007-53b3-472b-afe5-83b705175cfa"],
+Cell[515255, 8516, 220, 4, 50, "Section",ExpressionUUID->"a9c8634a-b5c9-4c35-bfe8-0101e7e770e9"],
+Cell[515478, 8522, 749, 14, 78, "Text",ExpressionUUID->"bc2a3007-53b3-472b-afe5-83b705175cfa"],
 Cell[CellGroupData[{
-Cell[516201, 8539, 181, 3, 20, "Subitem",ExpressionUUID->"311b7872-3919-4aab-a452-3494e39c2c26"],
-Cell[516385, 8544, 295, 6, 20, "Subitem",ExpressionUUID->"254af5ed-e4ce-4688-8073-ef936d1a9849"],
-Cell[516683, 8552, 188, 3, 20, "Subitem",ExpressionUUID->"ed3afa15-6e6c-4cb5-85da-782f65530032"]
+Cell[516252, 8540, 181, 3, 20, "Subitem",ExpressionUUID->"311b7872-3919-4aab-a452-3494e39c2c26"],
+Cell[516436, 8545, 295, 6, 20, "Subitem",ExpressionUUID->"254af5ed-e4ce-4688-8073-ef936d1a9849"],
+Cell[516734, 8553, 188, 3, 20, "Subitem",ExpressionUUID->"ed3afa15-6e6c-4cb5-85da-782f65530032"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[516920, 8561, 260, 5, 50, "Section",ExpressionUUID->"8ca1dcf3-2e0e-4751-8f80-bf0bf7e0221c"],
+Cell[516971, 8562, 260, 5, 50, "Section",ExpressionUUID->"8ca1dcf3-2e0e-4751-8f80-bf0bf7e0221c"],
 Cell[CellGroupData[{
-Cell[517205, 8570, 244, 5, 24, "ItemNumbered",ExpressionUUID->"dfaf4b72-ae4c-40d7-97dc-771866f36e75"],
-Cell[517452, 8577, 257, 4, 24, "ItemNumbered",ExpressionUUID->"3eb6f7a7-d89f-4019-90d1-b66960a787ca"]
+Cell[517256, 8571, 244, 5, 24, "ItemNumbered",ExpressionUUID->"dfaf4b72-ae4c-40d7-97dc-771866f36e75"],
+Cell[517503, 8578, 257, 4, 24, "ItemNumbered",ExpressionUUID->"3eb6f7a7-d89f-4019-90d1-b66960a787ca"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[517770, 8588, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"02773b62-4484-42e3-a1b1-b0c341d0f7f8",
+Cell[517821, 8589, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"02773b62-4484-42e3-a1b1-b0c341d0f7f8",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[517917, 8594, 151, 3, 50, "Section",ExpressionUUID->"0e25009a-eabc-4261-8a72-25d217bc5a4f"],
+Cell[517968, 8595, 151, 3, 50, "Section",ExpressionUUID->"0e25009a-eabc-4261-8a72-25d217bc5a4f"],
 Cell[CellGroupData[{
-Cell[518093, 8601, 2851, 66, 399, "Code",ExpressionUUID->"3a3a218a-c275-43d1-a9d2-7fb517e01ee9"],
-Cell[520947, 8669, 1230, 16, 24, "Output",ExpressionUUID->"1a82c284-410b-4649-ba46-6a08911fe1c6"]
+Cell[518144, 8602, 2851, 66, 399, "Code",ExpressionUUID->"3a3a218a-c275-43d1-a9d2-7fb517e01ee9"],
+Cell[520998, 8670, 1332, 18, 24, "Output",ExpressionUUID->"51b21b0e-85ba-43df-94b1-b3c4ed66e846"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[522238, 8692, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"f1801abe-ff2f-49af-8e89-514739178416",
+Cell[522391, 8695, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"f1801abe-ff2f-49af-8e89-514739178416",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[522385, 8698, 291, 5, 50, "Section",ExpressionUUID->"45e3adc8-a023-4068-9086-1f98b4509647"],
+Cell[522538, 8701, 291, 5, 50, "Section",ExpressionUUID->"45e3adc8-a023-4068-9086-1f98b4509647"],
 Cell[CellGroupData[{
-Cell[522701, 8707, 179, 3, 34, "Subsubsection",ExpressionUUID->"0bc82ef8-ef45-485e-b2e1-cf7f456d6920"],
-Cell[522883, 8712, 713, 13, 78, "Text",ExpressionUUID->"ec92db64-ab87-4191-8138-f1ef76b5417c"]
+Cell[522854, 8710, 179, 3, 34, "Subsubsection",ExpressionUUID->"0bc82ef8-ef45-485e-b2e1-cf7f456d6920"],
+Cell[523036, 8715, 713, 13, 78, "Text",ExpressionUUID->"ec92db64-ab87-4191-8138-f1ef76b5417c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[523633, 8730, 165, 3, 34, "Subsubsection",ExpressionUUID->"364d6657-a88f-475d-a010-d1428b07aebe"],
-Cell[523801, 8735, 1792, 28, 95, "Text",ExpressionUUID->"2c7ea732-6575-4d1f-938a-1ee5ad43940c"],
-Cell[525596, 8765, 189, 4, 28, "CodeText",ExpressionUUID->"d50156ec-2d3c-46ed-ae7f-cae783780fea"],
-Cell[525788, 8771, 324, 7, 26, "Text",ExpressionUUID->"aed2250a-b703-4d67-856f-052261b658ed"],
-Cell[526115, 8780, 214, 4, 28, "CodeText",ExpressionUUID->"f278b859-2682-4447-a48e-22d79208bf04"],
-Cell[526332, 8786, 234, 6, 26, "Text",ExpressionUUID->"c1bd1744-6777-4266-9244-369496bf5844"],
-Cell[526569, 8794, 238, 4, 28, "CodeText",ExpressionUUID->"65f3418e-dda9-41b9-8337-c0c8b88e2879"],
-Cell[526810, 8800, 330, 7, 26, "Text",ExpressionUUID->"a6d90ec6-5138-4753-aa8f-c5e34f5d3937"],
-Cell[527143, 8809, 238, 4, 28, "CodeText",ExpressionUUID->"bc04fe39-deda-45ff-aec4-fcf6449392ab"],
-Cell[527384, 8815, 585, 11, 43, "Text",ExpressionUUID->"7560ed46-a287-4b20-a2f1-4d214827b343"]
+Cell[523786, 8733, 165, 3, 34, "Subsubsection",ExpressionUUID->"364d6657-a88f-475d-a010-d1428b07aebe"],
+Cell[523954, 8738, 1792, 28, 95, "Text",ExpressionUUID->"2c7ea732-6575-4d1f-938a-1ee5ad43940c"],
+Cell[525749, 8768, 189, 4, 28, "CodeText",ExpressionUUID->"d50156ec-2d3c-46ed-ae7f-cae783780fea"],
+Cell[525941, 8774, 324, 7, 26, "Text",ExpressionUUID->"aed2250a-b703-4d67-856f-052261b658ed"],
+Cell[526268, 8783, 214, 4, 28, "CodeText",ExpressionUUID->"f278b859-2682-4447-a48e-22d79208bf04"],
+Cell[526485, 8789, 234, 6, 26, "Text",ExpressionUUID->"c1bd1744-6777-4266-9244-369496bf5844"],
+Cell[526722, 8797, 238, 4, 28, "CodeText",ExpressionUUID->"65f3418e-dda9-41b9-8337-c0c8b88e2879"],
+Cell[526963, 8803, 330, 7, 26, "Text",ExpressionUUID->"a6d90ec6-5138-4753-aa8f-c5e34f5d3937"],
+Cell[527296, 8812, 238, 4, 28, "CodeText",ExpressionUUID->"bc04fe39-deda-45ff-aec4-fcf6449392ab"],
+Cell[527537, 8818, 585, 11, 43, "Text",ExpressionUUID->"7560ed46-a287-4b20-a2f1-4d214827b343"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[528006, 8831, 171, 3, 34, "Subsubsection",ExpressionUUID->"1ca314be-692f-4d02-b5ff-374da829ebea"],
-Cell[528180, 8836, 1298, 21, 95, "Text",ExpressionUUID->"b4882225-d661-4b43-ba7a-0eb2de2be0d0"],
-Cell[529481, 8859, 238, 4, 28, "CodeText",ExpressionUUID->"ed6ca4eb-0116-4324-b01a-746a58861c73"],
-Cell[529722, 8865, 702, 11, 43, "Text",ExpressionUUID->"45df4c22-2741-4148-ae5a-fca0dabcc645"]
+Cell[528159, 8834, 171, 3, 34, "Subsubsection",ExpressionUUID->"1ca314be-692f-4d02-b5ff-374da829ebea"],
+Cell[528333, 8839, 1298, 21, 95, "Text",ExpressionUUID->"b4882225-d661-4b43-ba7a-0eb2de2be0d0"],
+Cell[529634, 8862, 238, 4, 28, "CodeText",ExpressionUUID->"ed6ca4eb-0116-4324-b01a-746a58861c73"],
+Cell[529875, 8868, 702, 11, 43, "Text",ExpressionUUID->"45df4c22-2741-4148-ae5a-fca0dabcc645"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[530461, 8881, 268, 4, 40, "Subsection",ExpressionUUID->"a1228f6e-b42b-4bce-8383-e5196174d6f6"],
-Cell[530732, 8887, 327, 7, 26, "Text",ExpressionUUID->"2a35a057-a977-4b74-8e00-67fe97d7c685"],
+Cell[530614, 8884, 268, 4, 40, "Subsection",ExpressionUUID->"a1228f6e-b42b-4bce-8383-e5196174d6f6"],
+Cell[530885, 8890, 327, 7, 26, "Text",ExpressionUUID->"2a35a057-a977-4b74-8e00-67fe97d7c685"],
 Cell[CellGroupData[{
-Cell[531084, 8898, 528, 9, 14, "Input",ExpressionUUID->"d6dbb34a-3f36-4858-9ff5-17ff3216fbfe",
+Cell[531237, 8901, 528, 9, 14, "Input",ExpressionUUID->"d6dbb34a-3f36-4858-9ff5-17ff3216fbfe",
  CellOpen->False],
-Cell[531615, 8909, 2886, 52, 252, "Output",ExpressionUUID->"83c19ef3-00f0-4342-9000-944eb4f98ba2"]
+Cell[531768, 8912, 2936, 53, 252, "Output",ExpressionUUID->"a81d0889-f317-48e3-80f9-56220b477896"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[534574, 8969, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"cfda7ac3-3003-43e2-9612-e7ac5b76fa80",
+Cell[534777, 8973, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"cfda7ac3-3003-43e2-9612-e7ac5b76fa80",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[534721, 8975, 218, 4, 50, "Section",ExpressionUUID->"d1587929-f2b0-4c5a-a49e-600272bc30be"],
-Cell[534942, 8981, 245, 6, 26, "Text",ExpressionUUID->"bb55c8fe-9578-461e-a8e1-71783fca07a1"],
-Cell[535190, 8989, 2024, 47, 177, "Code",ExpressionUUID->"c0c8561f-7ff7-4e66-8b08-80025a1d201e"],
-Cell[537217, 9038, 314, 6, 26, "Text",ExpressionUUID->"1cea9d8a-2af2-47a1-b29e-0aed6fa3ef2d"],
-Cell[537534, 9046, 1025, 16, 43, "Text",ExpressionUUID->"4a10b721-3f7a-40b1-863a-bdccd8396e7a"],
+Cell[534924, 8979, 218, 4, 50, "Section",ExpressionUUID->"d1587929-f2b0-4c5a-a49e-600272bc30be"],
+Cell[535145, 8985, 245, 6, 26, "Text",ExpressionUUID->"bb55c8fe-9578-461e-a8e1-71783fca07a1"],
+Cell[535393, 8993, 2109, 50, 177, "Code",ExpressionUUID->"c0c8561f-7ff7-4e66-8b08-80025a1d201e",
+ Evaluatable->False],
+Cell[537505, 9045, 314, 6, 26, "Text",ExpressionUUID->"1cea9d8a-2af2-47a1-b29e-0aed6fa3ef2d"],
+Cell[537822, 9053, 1025, 16, 43, "Text",ExpressionUUID->"4a10b721-3f7a-40b1-863a-bdccd8396e7a"],
 Cell[CellGroupData[{
-Cell[538584, 9066, 268, 4, 40, "Subsection",ExpressionUUID->"6e8ce95b-949c-4752-bd04-4f509542f890"],
-Cell[538855, 9072, 642, 11, 43, "Text",ExpressionUUID->"539d73a2-0f5d-45b7-bc2c-fdbce49a56dc"],
+Cell[538872, 9073, 268, 4, 40, "Subsection",ExpressionUUID->"6e8ce95b-949c-4752-bd04-4f509542f890"],
+Cell[539143, 9079, 642, 11, 43, "Text",ExpressionUUID->"539d73a2-0f5d-45b7-bc2c-fdbce49a56dc"],
 Cell[CellGroupData[{
-Cell[539522, 9087, 510, 8, 14, "Input",ExpressionUUID->"a7b09e1a-3591-4436-98c3-b5929aca5806",
+Cell[539810, 9094, 510, 8, 14, "Input",ExpressionUUID->"a7b09e1a-3591-4436-98c3-b5929aca5806",
  CellOpen->False],
-Cell[540035, 9097, 8276, 198, 106, "Output",ExpressionUUID->"5e0da908-3292-464b-af1a-9e60a3713904"]
+Cell[540323, 9104, 8415, 200, 106, "Output",ExpressionUUID->"77ed4596-269c-4d63-b150-0ffc1c8fe02b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[548384, 9303, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962",
+Cell[548811, 9312, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"531410f8-ffb4-48a2-8aad-4cc362129962",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[548531, 9309, 168, 3, 50, "Section",ExpressionUUID->"501a781d-6fa2-408c-a21d-b0af7fd5a8e7"],
-Cell[548702, 9314, 702, 12, 43, "Text",ExpressionUUID->"70831851-df78-471f-85d0-46c887e149b6"],
+Cell[548958, 9318, 168, 3, 50, "Section",ExpressionUUID->"501a781d-6fa2-408c-a21d-b0af7fd5a8e7"],
+Cell[549129, 9323, 702, 12, 43, "Text",ExpressionUUID->"70831851-df78-471f-85d0-46c887e149b6"],
 Cell[CellGroupData[{
-Cell[549429, 9330, 305, 5, 14, "Input",ExpressionUUID->"25e2c954-d33c-4a1d-871c-5f4952e1f0be",
+Cell[549856, 9339, 305, 5, 14, "Input",ExpressionUUID->"25e2c954-d33c-4a1d-871c-5f4952e1f0be",
  CellOpen->False],
-Cell[549737, 9337, 8450, 200, 106, "Output",ExpressionUUID->"95878bf1-3971-4775-8d9f-68066ec252dc"]
+Cell[550164, 9346, 8676, 203, 106, "Output",ExpressionUUID->"296824b3-cb53-4f23-bce2-f0f79feb7246"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[558248, 9544, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"087c6d40-ab33-47ad-bd9c-b2145817a8cf",
+Cell[558901, 9556, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"087c6d40-ab33-47ad-bd9c-b2145817a8cf",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[558395, 9550, 176, 3, 50, "Section",ExpressionUUID->"8cd4a7ba-e4af-4526-9537-5f5ca3549722"],
-Cell[558574, 9555, 759, 13, 78, "Text",ExpressionUUID->"01d6eb9e-0cb5-4130-a1ca-1fffa0659c0c"],
-Cell[559336, 9570, 491, 9, 26, "Text",ExpressionUUID->"21091eb2-794d-420f-bc1c-2706bdf4ea14"],
+Cell[559048, 9562, 176, 3, 50, "Section",ExpressionUUID->"8cd4a7ba-e4af-4526-9537-5f5ca3549722"],
+Cell[559227, 9567, 759, 13, 78, "Text",ExpressionUUID->"01d6eb9e-0cb5-4130-a1ca-1fffa0659c0c"],
+Cell[559989, 9582, 491, 9, 26, "Text",ExpressionUUID->"21091eb2-794d-420f-bc1c-2706bdf4ea14"],
 Cell[CellGroupData[{
-Cell[559852, 9583, 160, 3, 34, "Subsubsection",ExpressionUUID->"08e8532b-56d8-4066-8282-b44cc95be88a"],
-Cell[560015, 9588, 435, 8, 26, "Text",ExpressionUUID->"50340fbd-8ae5-4a88-a218-8807c81ab45f"],
+Cell[560505, 9595, 160, 3, 34, "Subsubsection",ExpressionUUID->"08e8532b-56d8-4066-8282-b44cc95be88a"],
+Cell[560668, 9600, 435, 8, 26, "Text",ExpressionUUID->"50340fbd-8ae5-4a88-a218-8807c81ab45f"],
 Cell[CellGroupData[{
-Cell[560475, 9600, 293, 5, 14, "Input",ExpressionUUID->"4abc5442-7b1f-45cd-a5ab-3e9e60c7f134",
+Cell[561128, 9612, 293, 5, 14, "Input",ExpressionUUID->"4abc5442-7b1f-45cd-a5ab-3e9e60c7f134",
  CellOpen->False],
-Cell[560771, 9607, 2551, 48, 182, "Output",ExpressionUUID->"b8fa1e12-5eba-4f96-b137-a225cca55be2"]
+Cell[561424, 9619, 2613, 47, 182, "Output",ExpressionUUID->"1811644a-3ced-4c64-86a3-2c5172869a99"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[563383, 9662, 177, 3, 50, "Section",ExpressionUUID->"b23d8fb1-aabc-4614-9602-13a576f91907"],
-Cell[563563, 9667, 1553, 25, 129, "Text",ExpressionUUID->"20f6228e-cba9-4fe8-80c5-bcca8de6db3c"],
+Cell[564098, 9673, 177, 3, 50, "Section",ExpressionUUID->"b23d8fb1-aabc-4614-9602-13a576f91907"],
+Cell[564278, 9678, 1553, 25, 129, "Text",ExpressionUUID->"20f6228e-cba9-4fe8-80c5-bcca8de6db3c"],
 Cell[CellGroupData[{
-Cell[565141, 9696, 302, 6, 14, "Input",ExpressionUUID->"115b4e82-be44-40f7-b4af-0331371062a0",
+Cell[565856, 9707, 302, 6, 14, "Input",ExpressionUUID->"115b4e82-be44-40f7-b4af-0331371062a0",
  CellOpen->False],
-Cell[565446, 9704, 2716, 50, 252, "Output",ExpressionUUID->"e2867661-a482-492d-97d1-90b88e14f6ab"]
+Cell[566161, 9715, 2765, 50, 252, "Output",ExpressionUUID->"40741c94-78c9-4880-b38b-d166be8d817d"]
 }, Open  ]],
-Cell[568177, 9757, 276, 6, 26, "Text",ExpressionUUID->"7867ab43-9527-49a1-a673-206f786b9f9b"],
-Cell[568456, 9765, 2299, 56, 206, "Code",ExpressionUUID->"2a68f06f-c3c5-42ce-b890-ae3d977e434d"],
-Cell[570758, 9823, 404, 8, 26, "Text",ExpressionUUID->"d2c196d0-8ea7-4abc-aef2-8cfe56484f53"],
+Cell[568941, 9768, 276, 6, 26, "Text",ExpressionUUID->"7867ab43-9527-49a1-a673-206f786b9f9b"],
+Cell[569220, 9776, 2386, 59, 206, "Code",ExpressionUUID->"2a68f06f-c3c5-42ce-b890-ae3d977e434d",
+ Evaluatable->False],
+Cell[571609, 9837, 404, 8, 26, "Text",ExpressionUUID->"d2c196d0-8ea7-4abc-aef2-8cfe56484f53"],
 Cell[CellGroupData[{
-Cell[571187, 9835, 298, 5, 14, "Input",ExpressionUUID->"11d60dc9-9625-4c80-a575-1e02f650997e",
+Cell[572038, 9849, 298, 5, 14, "Input",ExpressionUUID->"11d60dc9-9625-4c80-a575-1e02f650997e",
  CellOpen->False],
-Cell[571488, 9842, 2664, 48, 182, "Output",ExpressionUUID->"18724bc2-6f74-429a-8ce3-0f641f67f2bf"]
+Cell[572339, 9856, 2759, 50, 182, "Output",ExpressionUUID->"b5cb958f-d066-4667-9b83-dd6d0413c0a5"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[574213, 9897, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"79814d81-afe4-471c-9e56-5106cb01833c",
+Cell[575159, 9913, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"79814d81-afe4-471c-9e56-5106cb01833c",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[574360, 9903, 160, 3, 50, "Section",ExpressionUUID->"0fbaff39-506d-4fcd-b236-cbebd0f00516"],
-Cell[574523, 9908, 395, 9, 60, "Text",ExpressionUUID->"f3750367-fdd8-4426-9b90-a52ed9cbb708"]
+Cell[575306, 9919, 160, 3, 50, "Section",ExpressionUUID->"0fbaff39-506d-4fcd-b236-cbebd0f00516"],
+Cell[575469, 9924, 395, 9, 60, "Text",ExpressionUUID->"f3750367-fdd8-4426-9b90-a52ed9cbb708"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[574955, 9922, 151, 3, 50, "Section",ExpressionUUID->"4f955cc5-1e5f-4ce6-925d-62259904ba7f"],
-Cell[575109, 9927, 172, 3, 26, "Text",ExpressionUUID->"2b9f8449-b20a-4273-9a95-5af113f582b5"]
+Cell[575901, 9938, 151, 3, 50, "Section",ExpressionUUID->"4f955cc5-1e5f-4ce6-925d-62259904ba7f"],
+Cell[576055, 9943, 172, 3, 26, "Text",ExpressionUUID->"2b9f8449-b20a-4273-9a95-5af113f582b5"]
 }, Open  ]]
 }, Open  ]]
 }
