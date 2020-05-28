@@ -278,7 +278,7 @@ BubbleSortQuiz[start_]:=
 	
 (* Function that prints the start button *)	
 PrintStartButton[]:= 
-
+	Module[{startButton, startLink},
 	(* creates the start button*)
 	startButton =
 		Hyperlink[
@@ -305,8 +305,8 @@ PrintStartButton[]:=
 		Frame->All, 
 		FrameStyle->RGBColor[1.,1.,1.], 
 		Spacings->{2,6},
-		ItemStyle->Directive[FontFamily->default, FontSize->30, FontWeight->Bold]
-	];
+		ItemStyle->Directive[FontFamily->Default, FontSize->30, FontWeight->Bold]
+	]];
 
 End[]
 
