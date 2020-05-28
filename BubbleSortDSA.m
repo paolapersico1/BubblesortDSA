@@ -11,8 +11,8 @@
 
 BeginPackage["BubbleSortDSA`"]
 
-cards = Import/@FileNames["Cards/*.png", NotebookDirectory[]];
-homeIcon = Import/@FileNames["Images/Home.png",NotebookDirectory[]];
+cards = Import/@FileNames["Assets/Images/Cards/*.png", NotebookDirectory[]];
+homeIcon = Import[StringJoin[NotebookDirectory[],"Assets/Images/Home.png"]];
 
 PrintStartButton::usage="Function that prints start button"
 BubbleSortAnimation::usage="Function to create the bubblesort animation. Input: length of array, toggler name, boolean optimized version"
@@ -276,43 +276,11 @@ BubbleSortQuiz[start_]:=
 	terza=Row[{Text["Quanti scambi deve fare l'algoritmo nella prima passata?"], Spacer[20], element3, Spacer[20], answerButton3, Spacer[20], Dynamic[message3]}];
 	Column[{arr, Text[Style["QUIZ:", Large, Bold, Red]], prima, seconda, terza}]]; 
 	
-	(* Function that prints the start button *)	
-PrintStartButton[_]:=
-
-	(* creates the start button*)
-	StartButton =
-		Hyperlink[
-			Button[
-				homeIcon, 
-				ImageSize->{60,60}, 
-				Appearance->{None}
-			],
-		{EvaluationNotebook[],"FirstChapter"}];
-		
-	(*creates the start hyperlink*)
-	StartLink = 
-		Hyperlink[
-			"Inizia!", 
-			{EvaluationNotebook[], "FirstChapter"},
-			BaseStyle->RGBColor[0.,0.86,0.37]
-		];
-
-	(* returns the graphic elements*)
-	Grid[
-		{{StartButton,StartLink}},
-		Alignment->{{Right, Left}}, 
-		ItemSize->{{Scaled[0.45],Scaled[0.52]}}, 
-		Frame->All, 
-		FrameStyle->RGBColor[1.,1.,1.], 
-		Spacings->{2,6},
-		ItemStyle->Directive[FontFamily->default, FontSize->30, FontWeight->Bold]
-	]
-	
 (* Function that prints the start button *)	
-PrintStartButton[_]:=
+PrintStartButton[]:= 
 
 	(* creates the start button*)
-	StartButton =
+	startButton =
 		Hyperlink[
 			Button[
 				homeIcon, 
@@ -322,7 +290,7 @@ PrintStartButton[_]:=
 		{EvaluationNotebook[],"FirstChapter"}];
 		
 	(*creates the start hyperlink*)
-	StartLink = 
+	startLink = 
 		Hyperlink[
 			"Inizia!", 
 			{EvaluationNotebook[], "FirstChapter"},
@@ -331,14 +299,14 @@ PrintStartButton[_]:=
 
 	(* returns the graphic elements*)
 	Grid[
-		{{StartButton,StartLink}},
+		{{startButton,startLink}},
 		Alignment->{{Right, Left}}, 
 		ItemSize->{{Scaled[0.45],Scaled[0.52]}}, 
 		Frame->All, 
 		FrameStyle->RGBColor[1.,1.,1.], 
 		Spacings->{2,6},
 		ItemStyle->Directive[FontFamily->default, FontSize->30, FontWeight->Bold]
-	]
+	];
 
 End[]
 
