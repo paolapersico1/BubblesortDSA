@@ -12,7 +12,7 @@
 BeginPackage["BubbleSortDSA`"]
 
 cards = Import/@FileNames["Assets/Images/Cards/*.png", NotebookDirectory[]];
-homeIcon = Import[StringJoin[NotebookDirectory[],"Assets/Images/Home.png"]];
+homeIcon = Import[StringJoin[NotebookDirectory[],"Assets/Images/home.png"]];
 
 PrintStartButton::usage="Function that prints start button"
 BubbleSortAnimation::usage="Function to create the bubblesort animation. Input: length of array, toggler name, boolean optimized version"
