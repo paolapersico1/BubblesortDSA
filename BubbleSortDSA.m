@@ -272,9 +272,9 @@ BubbleSortQuiz[start_]:=
 							
 	(*return the graphics elements*)
 	arr=Row[Part[start],Background->Lighter[Gray, 0.5]];
-	prima=Row[{Text["Quante passate deve fare l'algoritmo per riordinare l'array?"], Spacer[63], element1, Spacer[20], answerButton1, Spacer[20], Dynamic[message1]}];
-	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare l'array?"], Spacer[20],element2,Spacer[20], answerButton2, Spacer[20], Dynamic[message2]}];
-	terza=Row[{Text["Quanti scambi deve fare l'algoritmo nella prima passata?"], Spacer[20], element3, Spacer[20], answerButton3, Spacer[20], Dynamic[message3]}];
+	prima=Row[{Text["Quante passate deve fare l'algoritmo per riordinare il vettore?"], Spacer[20], element1, Spacer[20], answerButton1, Spacer[20], Dynamic[message1]}];
+	seconda=Row[{Text["Quanti confronti deve fare l'algoritmo per riordinare il vettore?"], Spacer[20],element2,Spacer[20], answerButton2, Spacer[20], Dynamic[message2]}];
+	terza=Row[{Text["Quanti scambi deve fare l'algoritmo nella prima passata?"], Spacer[55], element3, Spacer[20], answerButton3, Spacer[20], Dynamic[message3]}];
 	Column[{arr, Text[Style["QUIZ:", Large, Bold, Red]], prima, seconda, terza}]]; 
 	
 
