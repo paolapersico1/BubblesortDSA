@@ -4,8 +4,7 @@ Package realizzato con Wolfram Mathematica (versione 12.1) che implementa un tut
 Progetto realizzato per il corso di Matematica Computazionale (LM in Informatica) dell'Università di Bologna, A.A. 2019/20.
 
 ## Contenuto della repository
-- ```Documents/``` directory che contiene la documentazione usata per il progetto
-- ```Cards/``` directory che contiene le immagini utilizzate
+- ```Assets/``` directory che contiene i file multimediali usati per il progetto
 - ```BubbleSortDsa.m``` package che contiene l'implementazione delle funzioni 
 - ```tutorial.nb``` notebook principale del progetto 
 
