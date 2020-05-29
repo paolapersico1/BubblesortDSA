@@ -123,7 +123,7 @@ StartBubbleSortExercise[type_:"Quiz"] :=
 	(*radiobuttonbar to select the length of the array*)
 	lengthBar = RadioButtonBar[Dynamic[len],Range[1,6]];
 	(*array in input*)
-	elements = InputField[Dynamic[inputArray], FieldHint-> "0,1,2,3,4,5"]; 
+	elements = InputField[Dynamic[inputArray], String, FieldHint-> "0,1,2,3,4,5"]; 
 	(*button to create the cards array and start the game*)    
 	createButton = Button["Crea nuovo vettore", 
 	If[SameQ[inputArray, Null], (*if the user hasn't specified an array*)
@@ -133,7 +133,7 @@ StartBubbleSortExercise[type_:"Quiz"] :=
 		inputArray = Null; 
 		message = "",
 		(*otherwise we check if the input is a list of integers between 0 and 9*)
-		start = ToExpression[StringJoin["{", Part[inputArray,1,1], "}"]];
+		start = ToExpression[StringJoin["{", inputArray, "}"]];
 		If[MatchQ[start, {(0|1|2|3|4|5|6|7|8|9)..}], 
 			start = Map[NumberToCard, start];
 			(*if the length of the array is the same as the one selected, start the game*)
